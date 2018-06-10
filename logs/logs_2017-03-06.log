@@ -1,0 +1,92 @@
+2017-03-06 17:26:23  [ main:0 ] - [ INFO ]  JAVA HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre
+2017-03-06 17:26:23  [ main:2 ] - [ INFO ]  OS Name=Mac OS X
+2017-03-06 17:26:23  [ main:3 ] - [ INFO ]  Me Path=/Users/dangfm/Documents/workspace/stocksocketclient/out/production/stocksocketclient
+2017-03-06 17:26:23  [ main:3 ] - [ INFO ]  当前最大可用内存:1820 M
+2017-03-06 17:26:23  [ main:120 ] - [ INFO ]  redis 127.0.0.1:6379 connected!
+2017-03-06 17:26:23  [ main:126 ] - [ INFO ]  redis 127.0.0.1:6379 connected!
+2017-03-06 17:26:24  [ pool-1-thread-2:1386 ] - [ INFO ]  生成5分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:26:24  [ pool-1-thread-2:1394 ] - [ INFO ]  生成15分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:26:24  [ pool-1-thread-2:1401 ] - [ INFO ]  生成30分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:26:24  [ pool-1-thread-2:1404 ] - [ INFO ]  生成60分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:26:24  [ xNbcPool-1-thread-1:1520 ] - [ INFO ]  remoteName 101.37.23.52 has connected ！
+2017-03-06 17:26:24  [ pool-1-thread-1:1550 ] - [ INFO ]  The Socket Client start on port: 9099 IP:101.37.23.52
+2017-03-06 17:27:28  [ main:1 ] - [ INFO ]  JAVA HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre
+2017-03-06 17:27:28  [ main:1 ] - [ INFO ]  OS Name=Mac OS X
+2017-03-06 17:27:28  [ main:1 ] - [ INFO ]  Me Path=/Users/dangfm/Documents/workspace/stocksocketclient/out/production/stocksocketclient
+2017-03-06 17:27:28  [ main:2 ] - [ INFO ]  当前最大可用内存:1820 M
+2017-03-06 17:27:29  [ main:103 ] - [ INFO ]  redis 127.0.0.1:6379 connected!
+2017-03-06 17:27:29  [ main:103 ] - [ INFO ]  redis 127.0.0.1:6379 connected!
+2017-03-06 17:27:30  [ pool-1-thread-2:1512 ] - [ INFO ]  生成5分钟k线成功
+2017-03-06 17:27:30  [ xNbcPool-1-thread-1:1544 ] - [ INFO ]  remoteName 101.37.23.52 has connected ！
+2017-03-06 17:27:30  [ pool-1-thread-1:1584 ] - [ INFO ]  The Socket Client start on port: 9099 IP:101.37.23.52
+2017-03-06 17:27:30  [ pool-1-thread-2:1609 ] - [ INFO ]  生成15分钟k线成功
+2017-03-06 17:27:30  [ pool-1-thread-2:1615 ] - [ INFO ]  生成30分钟k线成功
+2017-03-06 17:27:30  [ pool-1-thread-2:1618 ] - [ INFO ]  生成60分钟k线成功
+2017-03-06 17:28:34  [ main:0 ] - [ INFO ]  JAVA HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre
+2017-03-06 17:28:34  [ main:3 ] - [ INFO ]  OS Name=Mac OS X
+2017-03-06 17:28:34  [ main:4 ] - [ INFO ]  Me Path=/Users/dangfm/Documents/workspace/stocksocketclient/out/production/stocksocketclient
+2017-03-06 17:28:34  [ main:5 ] - [ INFO ]  当前最大可用内存:1820 M
+2017-03-06 17:28:35  [ main:228 ] - [ INFO ]  redis 127.0.0.1:6379 connected!
+2017-03-06 17:28:35  [ main:230 ] - [ INFO ]  redis 127.0.0.1:6379 connected!
+2017-03-06 17:28:36  [ xNbcPool-1-thread-1:1694 ] - [ INFO ]  remoteName 101.37.23.52 has connected ！
+2017-03-06 17:28:36  [ pool-1-thread-1:1720 ] - [ INFO ]  The Socket Client start on port: 9099 IP:101.37.23.52
+2017-03-06 17:28:36  [ pool-1-thread-2:1750 ] - [ INFO ]  生成5分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:28:36  [ pool-1-thread-2:1768 ] - [ INFO ]  生成15分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:28:36  [ pool-1-thread-2:1781 ] - [ INFO ]  生成30分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:28:36  [ pool-1-thread-2:1789 ] - [ INFO ]  生成60分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:29:21  [ main:1 ] - [ INFO ]  JAVA HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre
+2017-03-06 17:29:21  [ main:3 ] - [ INFO ]  OS Name=Mac OS X
+2017-03-06 17:29:21  [ main:3 ] - [ INFO ]  Me Path=/Users/dangfm/Documents/workspace/stocksocketclient/out/production/stocksocketclient
+2017-03-06 17:29:21  [ main:3 ] - [ INFO ]  当前最大可用内存:1820 M
+2017-03-06 17:29:21  [ main:100 ] - [ INFO ]  redis 127.0.0.1:6379 connected!
+2017-03-06 17:29:21  [ main:107 ] - [ INFO ]  redis 127.0.0.1:6379 connected!
+2017-03-06 17:29:23  [ pool-1-thread-1:1487 ] - [ INFO ]  The Socket Client start on port: 9099 IP:101.37.23.52
+2017-03-06 17:29:23  [ pool-1-thread-2:1496 ] - [ DEBUG ]  生成5分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:29:23  [ pool-1-thread-2:1534 ] - [ DEBUG ]  生成15分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:29:23  [ pool-1-thread-2:1544 ] - [ DEBUG ]  生成30分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:29:23  [ pool-1-thread-2:1548 ] - [ DEBUG ]  生成60分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:29:24  [ xNbcPool-1-thread-1:2260 ] - [ INFO ]  remoteName 101.37.23.52 has connected ！
+2017-03-06 17:30:05  [ main:1 ] - [ INFO ]  JAVA HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre
+2017-03-06 17:30:05  [ main:3 ] - [ INFO ]  OS Name=Mac OS X
+2017-03-06 17:30:05  [ main:3 ] - [ INFO ]  Me Path=/Users/dangfm/Documents/workspace/stocksocketclient/out/production/stocksocketclient
+2017-03-06 17:30:05  [ main:4 ] - [ INFO ]  当前最大可用内存:1820 M
+2017-03-06 17:30:05  [ main:178 ] - [ INFO ]  redis 127.0.0.1:6379 connected!
+2017-03-06 17:30:05  [ main:186 ] - [ INFO ]  redis 127.0.0.1:6379 connected!
+2017-03-06 17:30:11  [ pool-1-thread-2:6174 ] - [ DEBUG ]  生成5分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:30:11  [ pool-1-thread-2:6179 ] - [ DEBUG ]  生成15分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:30:11  [ pool-1-thread-2:6184 ] - [ DEBUG ]  生成30分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:30:11  [ pool-1-thread-2:6185 ] - [ DEBUG ]  生成60分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:30:11  [ xNbcPool-1-thread-1:6325 ] - [ INFO ]  remoteName 101.37.23.52 has connected ！
+2017-03-06 17:30:11  [ pool-1-thread-1:6370 ] - [ INFO ]  The Socket Client start on port: 9099 IP:101.37.23.52
+2017-03-06 17:30:44  [ main:1 ] - [ INFO ]  JAVA HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre
+2017-03-06 17:30:44  [ main:9 ] - [ INFO ]  OS Name=Mac OS X
+2017-03-06 17:30:44  [ main:10 ] - [ INFO ]  Me Path=/Users/dangfm/Documents/workspace/stocksocketclient/out/production/stocksocketclient
+2017-03-06 17:30:44  [ main:27 ] - [ INFO ]  当前最大可用内存:1820 M
+2017-03-06 17:30:44  [ main:275 ] - [ ERROR ]  redis 127.0.0.1:6379 disconnected
+2017-03-06 17:30:44  [ main:277 ] - [ ERROR ]  redis 127.0.0.1:6379 disconnected
+2017-03-06 17:30:45  [ xNbcPool-1-thread-1:1725 ] - [ INFO ]  remoteName 101.37.23.52 has connected ！
+2017-03-06 17:30:45  [ pool-1-thread-1:1766 ] - [ INFO ]  The Socket Client start on port: 9099 IP:101.37.23.52
+2017-03-06 17:30:46  [ pool-1-thread-2:1847 ] - [ DEBUG ]  生成5分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:30:46  [ pool-1-thread-2:1866 ] - [ DEBUG ]  生成15分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:30:46  [ pool-1-thread-2:1876 ] - [ DEBUG ]  生成30分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:30:46  [ pool-1-thread-2:1883 ] - [ DEBUG ]  生成60分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:31:53  [ main:0 ] - [ INFO ]  JAVA HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre
+2017-03-06 17:31:53  [ main:3 ] - [ INFO ]  OS Name=Mac OS X
+2017-03-06 17:31:53  [ main:3 ] - [ INFO ]  Me Path=/Users/dangfm/Documents/workspace/stocksocketclient/out/production/stocksocketclient
+2017-03-06 17:31:53  [ main:4 ] - [ INFO ]  当前最大可用内存:1820 M
+2017-03-06 17:31:54  [ main:193 ] - [ INFO ]  redis 127.0.0.1:6379 connected!
+2017-03-06 17:31:54  [ main:195 ] - [ INFO ]  redis 127.0.0.1:6379 connected!
+2017-03-06 17:31:55  [ xNbcPool-1-thread-1:1655 ] - [ INFO ]  remoteName 101.37.23.52 has connected ！
+2017-03-06 17:31:55  [ pool-1-thread-2:1674 ] - [ DEBUG ]  生成5分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:31:55  [ pool-1-thread-1:1678 ] - [ INFO ]  The Socket Client start on port: 9099 IP:101.37.23.52
+2017-03-06 17:31:55  [ pool-1-thread-2:1690 ] - [ DEBUG ]  生成15分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:31:55  [ pool-1-thread-2:1700 ] - [ DEBUG ]  生成30分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:31:55  [ pool-1-thread-2:1709 ] - [ DEBUG ]  生成60分钟k线的日期已经是最新的,无需生成
+2017-03-06 17:54:54  [ main:0 ] - [ INFO ]  JAVA HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre
+2017-03-06 17:54:54  [ main:1 ] - [ INFO ]  OS Name=Mac OS X
+2017-03-06 17:54:54  [ main:1 ] - [ INFO ]  Me Path=/Users/dangfm/Documents/workspace/stocksocketclient/out/production/stocksocketclient
+2017-03-06 17:54:54  [ main:1 ] - [ INFO ]  当前最大可用内存:1820 M
+2017-03-06 17:54:54  [ main:45 ] - [ INFO ]  redis 127.0.0.1:6379 connected!
+2017-03-06 17:54:54  [ main:46 ] - [ INFO ]  redis 127.0.0.1:6379 connected!
+2017-03-06 17:54:56  [ pool-1-thread-1:1451 ] - [ INFO ]  The Socket Client start on port: 9099 IP:101.37.23.52
+2017-03-06 17:54:56  [ xNbcPool-1-thread-1:2096 ] - [ INFO ]  remoteName 101.37.23.52 has connected ！

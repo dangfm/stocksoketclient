@@ -1,0 +1,242 @@
+2017-10-15 09:26:19  [ main:67 ] - [ ERROR ]  redis 127.0.0.1:6379 disconnected
+2017-10-15 09:26:19  [ main:70 ] - [ ERROR ]  redis 127.0.0.1:6379 disconnected
+2017-10-15 09:46:46  [ pool-1-thread-791:1227442 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-317:1227441 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-729:1227441 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-883:1227441 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-710:1227441 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-111:1227441 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-899:1227441 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-720:1227441 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-58:1227441 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-348:1227440 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-493:1227440 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-575:1227440 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-579:1227440 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-477:1227440 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-322:1227439 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-140:1227439 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-71:1227429 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-810:1227429 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-716:1227408 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-683:1227056 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 09:46:46  [ pool-1-thread-352:1227056 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 10:39:37  [ pool-1-thread-577:4398117 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:39:37  [ pool-1-thread-673:4398113 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:39:36  [ pool-1-thread-294:4397695 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:39:36  [ pool-1-thread-20:4397684 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:39:36  [ pool-1-thread-50:4397301 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:39:36  [ pool-1-thread-826:4397087 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:39:36  [ pool-1-thread-861:4397087 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:39:36  [ pool-1-thread-93:4397079 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:39:35  [ pool-1-thread-900:4396861 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:39:35  [ pool-1-thread-162:4396861 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:39:35  [ pool-1-thread-254:4396598 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:39:35  [ pool-1-thread-811:4396597 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:39:35  [ pool-1-thread-251:4395999 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:39:35  [ pool-1-thread-214:4395989 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:39:35  [ pool-1-thread-5:4395988 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:39:35  [ pool-1-thread-386:4395988 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:39:35  [ pool-1-thread-415:4395937 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:46:14  [ pool-1-thread-799:4795162 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:46:14  [ pool-1-thread-211:4794969 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:46:14  [ pool-1-thread-540:4794965 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:46:13  [ pool-1-thread-675:4794784 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:46:13  [ pool-1-thread-689:4794784 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:46:07  [ pool-1-thread-379:4788183 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:46:06  [ pool-1-thread-637:4787140 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:46:06  [ pool-1-thread-611:4787140 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:46:06  [ pool-1-thread-128:4787140 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:46:06  [ pool-1-thread-124:4787139 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:46:06  [ pool-1-thread-759:4786962 ] - [ ERROR ]  Operation timed out
+2017-10-15 10:45:42  [ pool-1-thread-427:4762976 ] - [ ERROR ]  Operation timed out
+2017-10-15 11:52:19  [ pool-1-thread-853:8760355 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC11f0] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_WRITE, OP_READ (5) isValid=true, isOpen=true, lastException=null)
+2017-10-15 13:52:20  [ pool-1-thread-237:15961500 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1716] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_WRITE, OP_READ (5) isValid=true, isOpen=true, lastException=null)
+2017-10-15 13:52:20  [ pool-1-thread-219:15961493 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1714] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-15 13:52:20  [ pool-1-thread-522:15961206 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1712] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-15 14:06:32  [ pool-1-thread-174:16812996 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1803] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_WRITE, OP_READ (5) isValid=true, isOpen=true, lastException=null)
+2017-10-15 14:06:06  [ pool-1-thread-39:16787700 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1805] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-15 14:06:06  [ pool-1-thread-376:16787700 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1807] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-15 14:55:25  [ pool-1-thread-602:19746544 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1a60] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-15 14:55:25  [ pool-1-thread-601:19746544 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1a61] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-15 14:55:25  [ pool-1-thread-269:19746544 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1a5f] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-15 14:55:25  [ pool-1-thread-33:19746544 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1a5e] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-15 14:55:25  [ pool-1-thread-494:19746544 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1a5d] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-15 14:55:25  [ pool-1-thread-616:19746544 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1a65] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-15 14:55:25  [ pool-1-thread-173:19746544 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1a66] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-15 14:55:25  [ pool-1-thread-132:19746544 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1a63] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-15 14:55:25  [ pool-1-thread-733:19746544 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1a64] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-15 14:55:25  [ pool-1-thread-879:19746544 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1a62] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-15 14:55:25  [ pool-1-thread-379:19746544 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1a68] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-15 14:55:25  [ pool-1-thread-473:19746544 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1a67] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-15 15:16:21  [ pool-1-thread-335:21002250 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1b2b] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=72, receivedBytes=0, sendQueueSize=0, countUnknownOnWritten=0, sendQueueSize=0, countIncompleteWrites= sendBytes=72, reveivedBytes=0, key=OP_WRITE, OP_READ (5) isValid=true, isOpen=true, lastException=null)
+2017-10-15 15:16:21  [ pool-1-thread-751:21002250 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1b3b] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=72, receivedBytes=0, sendQueueSize=0, countUnknownOnWritten=0, sendQueueSize=0, countIncompleteWrites= sendBytes=72, reveivedBytes=0, key=OP_WRITE, OP_READ (5) isValid=true, isOpen=true, lastException=null)
+2017-10-15 15:16:21  [ pool-1-thread-443:21002250 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1b35] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_WRITE, OP_READ (5) isValid=true, isOpen=true, lastException=null)
+2017-10-15 15:16:21  [ pool-1-thread-211:21002250 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1b27] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_WRITE, OP_READ (5) isValid=true, isOpen=true, lastException=null)
+2017-10-15 15:16:21  [ pool-1-thread-357:21002250 ] - [ ERROR ]  [7658c32015f1da393203c9cc87fC1b23] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_WRITE, OP_READ (5) isValid=true, isOpen=true, lastException=null)
+2017-10-15 17:34:42  [ pool-1-thread-601:29303929 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 17:34:42  [ pool-1-thread-562:29303929 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 17:34:42  [ pool-1-thread-95:29303928 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 17:34:42  [ pool-1-thread-369:29303928 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 17:34:42  [ pool-1-thread-836:29303927 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 17:34:42  [ pool-1-thread-12:29303925 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 17:34:42  [ pool-1-thread-533:29303556 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 17:34:42  [ pool-1-thread-447:29303555 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:04:28  [ pool-1-thread-16:31089732 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:04:28  [ pool-1-thread-395:31089715 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:04:28  [ pool-1-thread-621:31089715 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:04:28  [ pool-1-thread-274:31089715 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:04:28  [ pool-1-thread-448:31089714 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:04:20  [ pool-1-thread-298:31081817 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:14:20  [ pool-1-thread-347:31681255 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:34:39  [ pool-1-thread-637:32900007 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:34:39  [ pool-1-thread-741:32900007 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:34:39  [ pool-1-thread-117:32900007 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:54:41  [ pool-1-thread-707:34102787 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:54:41  [ pool-1-thread-739:34102788 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-621:34102789 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:54:41  [ pool-1-thread-221:34102789 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-91:34102789 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-376:34102790 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-480:34102790 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-708:34102790 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:55:13  [ pool-1-thread-447:34134070 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:54:42  [ pool-1-thread-132:34102961 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-697:34102790 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-785:34102790 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-514:34102790 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-738:34102790 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-104:34102790 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-50:34102789 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-796:34102789 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-33:34102789 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-294:34102789 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:54:41  [ pool-1-thread-140:34102788 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:54:41  [ pool-1-thread-840:34102787 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-508:34102787 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-552:34102785 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:54:41  [ pool-1-thread-324:34102562 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:54:41  [ pool-1-thread-130:34102379 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 18:54:41  [ pool-1-thread-262:34102379 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:41  [ pool-1-thread-461:34102379 ] - [ ERROR ]  Operation timed out
+2017-10-15 18:54:38  [ pool-1-thread-182:34099136 ] - [ ERROR ]  Operation timed out
+2017-10-15 19:00:06  [ pool-1-thread-630:34427417 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 19:00:06  [ pool-1-thread-879:34427417 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 19:00:06  [ pool-1-thread-200:34427416 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 19:00:06  [ pool-1-thread-830:34427416 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 19:00:06  [ pool-1-thread-330:34427415 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 19:00:06  [ pool-1-thread-348:34427414 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 19:05:26  [ pool-1-thread-549:34747256 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 19:05:26  [ pool-1-thread-87:34747059 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 19:05:26  [ pool-1-thread-173:34747053 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 19:05:26  [ pool-1-thread-888:34747051 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 19:05:26  [ pool-1-thread-214:34747049 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 19:05:26  [ pool-1-thread-338:34747048 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 19:05:26  [ pool-1-thread-673:34747046 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 19:21:37  [ pool-1-thread-258:35718832 ] - [ ERROR ]  Connection reset by peer
+2017-10-15 22:43:14  [ pool-1-thread-745:47815106 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:12  [ pool-1-thread-533:47813054 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:12  [ pool-1-thread-447:47813050 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:12  [ pool-1-thread-776:47813049 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:18  [ pool-1-thread-879:47819727 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:19  [ pool-1-thread-450:47820462 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:19  [ pool-1-thread-872:47820465 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:19  [ pool-1-thread-419:47820469 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:21  [ pool-1-thread-502:47822148 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:21  [ pool-1-thread-82:47822149 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:21  [ pool-1-thread-316:47822465 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:21  [ pool-1-thread-830:47822465 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:21  [ pool-1-thread-658:47822465 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:21  [ pool-1-thread-459:47822465 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:21  [ pool-1-thread-611:47822465 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:21  [ pool-1-thread-232:47822465 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:21  [ pool-1-thread-91:47822466 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:21  [ pool-1-thread-448:47822466 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:21  [ pool-1-thread-480:47822474 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:21  [ pool-1-thread-371:47822477 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:21  [ pool-1-thread-741:47822480 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:21  [ pool-1-thread-789:47822483 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-330:47823102 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-734:47823102 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-593:47823134 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-575:47823136 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-73:47823160 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-131:47823193 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-759:47823193 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-123:47823194 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-147:47823193 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-708:47823195 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-247:47823194 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-95:47823196 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-10:47823199 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-584:47823200 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-349:47823200 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-221:47823200 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-130:47823200 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-756:47823204 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-67:47823214 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-50:47823214 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-840:47823215 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-226:47823215 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-621:47823215 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-461:47823215 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-783:47823215 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-494:47823216 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-716:47823216 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:22  [ pool-1-thread-855:47823217 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:24  [ pool-1-thread-99:47825193 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:24  [ pool-1-thread-443:47825193 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:24  [ pool-1-thread-4:47825193 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:27  [ pool-1-thread-776:47828315 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:27  [ pool-1-thread-533:47828316 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:27  [ pool-1-thread-745:47828317 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:27  [ pool-1-thread-447:47828318 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:28  [ pool-1-thread-879:47829752 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:29  [ pool-1-thread-450:47830487 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:29  [ pool-1-thread-872:47830487 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:29  [ pool-1-thread-419:47830497 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:31  [ pool-1-thread-502:47832166 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:31  [ pool-1-thread-82:47832167 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:31  [ pool-1-thread-830:47832488 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:31  [ pool-1-thread-480:47832488 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:31  [ pool-1-thread-611:47832488 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:31  [ pool-1-thread-658:47832489 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:31  [ pool-1-thread-448:47832488 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:31  [ pool-1-thread-316:47832489 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:31  [ pool-1-thread-232:47832489 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:31  [ pool-1-thread-371:47832490 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:31  [ pool-1-thread-91:47832490 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:31  [ pool-1-thread-459:47832490 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:31  [ pool-1-thread-741:47832494 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:31  [ pool-1-thread-789:47832499 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-330:47833118 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-734:47833131 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-593:47833150 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-575:47833161 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-73:47833199 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-247:47833208 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-708:47833210 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-147:47833211 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-131:47833211 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-95:47833211 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-759:47833212 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-123:47833214 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-584:47833220 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-349:47833221 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-130:47833222 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-756:47833223 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-10:47833223 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-67:47833226 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-221:47833226 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-50:47833228 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-494:47833229 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-461:47833229 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-840:47833230 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-783:47833231 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-855:47833232 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-621:47833232 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-716:47833232 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:32  [ pool-1-thread-226:47833232 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:34  [ pool-1-thread-99:47835210 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:34  [ pool-1-thread-4:47835213 ] - [ ERROR ]  Connection refused
+2017-10-15 22:43:34  [ pool-1-thread-443:47835214 ] - [ ERROR ]  Connection refused

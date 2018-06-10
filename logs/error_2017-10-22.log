@@ -1,0 +1,51 @@
+2017-10-22 08:55:49  [ main:194 ] - [ ERROR ]  redis 127.0.0.1:6379 disconnected
+2017-10-22 08:55:49  [ main:200 ] - [ ERROR ]  redis 127.0.0.1:6379 disconnected
+2017-10-22 09:04:04  [ pool-1-thread-490:495098 ] - [ ERROR ]  [7658c33915f41942e2c74909ca6C3f4] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-22 09:04:04  [ pool-1-thread-364:494820 ] - [ ERROR ]  [7658c33915f41942e2c74909ca6C3f2] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-22 12:54:29  [ pool-1-thread-468:14319629 ] - [ ERROR ]  [7658c33915f41942e2c74909ca6Cf85] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_WRITE, OP_READ (5) isValid=true, isOpen=true, lastException=null)
+2017-10-22 12:54:29  [ pool-1-thread-791:14319629 ] - [ ERROR ]  [7658c33915f41942e2c74909ca6Cf83] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_WRITE, OP_READ (5) isValid=true, isOpen=true, lastException=null)
+2017-10-22 17:36:08  [ pool-1-thread-262:31218985 ] - [ ERROR ]  Operation timed out
+2017-10-22 16:48:48  [ pool-1-thread-35:28379013 ] - [ ERROR ]  [7658c33915f41942e2c74909ca6C1388] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-22 18:14:26  [ pool-1-thread-657:33516225 ] - [ ERROR ]  [7658c33915f41942e2c74909ca6C1507] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=<null>, isOpen=false, lastException=java.io.IOException: Error by set write selection key now java.io.IOException: [7658c33915f41942e2c74909ca6C1507] Error occured by setting write selection key. key is null
+	at org.xsocket.connection.IoSocketDispatcher.setWriteSelectionKeyNow(IoSocketDispatcher.java:582)
+	at org.xsocket.connection.IoSocketHandler$SetWriteSelectionKeyTask.run(IoSocketHandler.java:424)
+	at org.xsocket.connection.IoSocketDispatcher.performKeyUpdateTasks(IoSocketDispatcher.java:537)
+	at org.xsocket.connection.IoSocketDispatcher.run(IoSocketDispatcher.java:227)
+	at java.lang.Thread.run(Thread.java:748)
+)
+2017-10-22 18:23:20  [ pool-1-thread-857:34050661 ] - [ ERROR ]  Connection reset by peer
+2017-10-22 17:36:31  [ pool-1-thread-756:31241717 ] - [ ERROR ]  Operation timed out
+2017-10-22 17:36:31  [ pool-1-thread-606:31241706 ] - [ ERROR ]  Operation timed out
+2017-10-22 17:35:56  [ pool-1-thread-20:31206531 ] - [ ERROR ]  Operation timed out
+2017-10-22 17:35:51  [ pool-1-thread-869:31201769 ] - [ ERROR ]  Operation timed out
+2017-10-22 17:35:48  [ pool-1-thread-712:31198385 ] - [ ERROR ]  Operation timed out
+2017-10-22 17:35:14  [ pool-1-thread-489:31165188 ] - [ ERROR ]  Operation timed out
+2017-10-22 17:35:14  [ pool-1-thread-2:31164880 ] - [ ERROR ]  Operation timed out
+2017-10-22 17:35:14  [ pool-1-thread-774:31164880 ] - [ ERROR ]  Operation timed out
+2017-10-22 17:35:03  [ pool-1-thread-371:31153727 ] - [ ERROR ]  Operation timed out
+2017-10-22 17:34:32  [ pool-1-thread-422:31122320 ] - [ ERROR ]  Operation timed out
+2017-10-22 17:34:20  [ pool-1-thread-87:31110920 ] - [ ERROR ]  Operation timed out
+2017-10-22 17:33:44  [ pool-1-thread-416:31074942 ] - [ ERROR ]  Operation timed out
+2017-10-22 17:33:44  [ pool-1-thread-323:31074942 ] - [ ERROR ]  Operation timed out
+2017-10-22 17:33:42  [ pool-1-thread-469:31072631 ] - [ ERROR ]  Operation timed out
+2017-10-22 17:31:57  [ pool-1-thread-493:30967795 ] - [ ERROR ]  Network is unreachable
+2017-10-22 17:31:26  [ pool-1-thread-850:30936350 ] - [ ERROR ]  Network is unreachable
+2017-10-22 17:30:11  [ pool-1-thread-310:30861326 ] - [ ERROR ]  Network is unreachable
+2017-10-22 17:30:11  [ pool-1-thread-46:30861326 ] - [ ERROR ]  Network is unreachable
+2017-10-22 17:29:58  [ pool-1-thread-586:30849203 ] - [ ERROR ]  Network is unreachable
+2017-10-22 17:29:58  [ pool-1-thread-196:30849200 ] - [ ERROR ]  Network is unreachable
+2017-10-22 17:29:58  [ pool-1-thread-736:30848927 ] - [ ERROR ]  Network is unreachable
+2017-10-22 17:29:45  [ pool-1-thread-211:30835602 ] - [ ERROR ]  Network is unreachable
+2017-10-22 17:29:11  [ pool-1-thread-848:30801930 ] - [ ERROR ]  Network is unreachable
+2017-10-22 17:29:07  [ pool-1-thread-116:30797942 ] - [ ERROR ]  Network is unreachable
+2017-10-22 17:27:09  [ pool-1-thread-628:30680065 ] - [ ERROR ]  Network is unreachable
+2017-10-22 17:25:49  [ pool-1-thread-784:30599925 ] - [ ERROR ]  Network is unreachable
+2017-10-22 17:25:45  [ pool-1-thread-23:30595577 ] - [ ERROR ]  Network is unreachable
+2017-10-22 17:25:40  [ pool-1-thread-805:30590232 ] - [ ERROR ]  Network is unreachable
+2017-10-22 17:21:06  [ pool-1-thread-429:30316986 ] - [ ERROR ]  [7658c33915f41942e2c74909ca6C144a] send timeout 1 min reached. returning from sync flushing (countIsWritten=0, countOnException=0, sendBytes=0, receivedBytes=0, sendQueueSize=72, countUnknownOnWritten=0, sendQueueSize=72, countIncompleteWrites= sendBytes=0, reveivedBytes=0, key=OP_READ (1) isValid=true, isOpen=true, lastException=null)
+2017-10-22 17:21:04  [ pool-1-thread-544:30315013 ] - [ ERROR ]  Connection reset by peer
+2017-10-22 18:33:25  [ pool-1-thread-41:34655354 ] - [ ERROR ]  Connection reset by peer
+2017-10-22 18:33:25  [ pool-1-thread-881:34655354 ] - [ ERROR ]  Connection reset by peer
+2017-10-22 18:33:25  [ pool-1-thread-807:34655353 ] - [ ERROR ]  Connection reset by peer
+2017-10-22 18:33:25  [ pool-1-thread-143:34655353 ] - [ ERROR ]  Connection reset by peer
+2017-10-22 18:33:25  [ pool-1-thread-186:34655350 ] - [ ERROR ]  Connection reset by peer

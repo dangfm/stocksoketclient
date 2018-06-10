@@ -1,0 +1,10 @@
+2018-04-23 01:04:24  [ main:0 ] - [ ERROR ]  redis:127.0.0.1:6379 unconnected!
+2018-04-23 01:04:24  [ main:5 ] - [ ERROR ]  redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)
+2018-04-23 01:04:24  [ main:6 ] - [ ERROR ]  redis:127.0.0.1:6379 unconnected!
+2018-04-23 01:04:24  [ main:7 ] - [ ERROR ]  redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)
+2018-04-23 01:04:24  [ main:14 ] - [ ERROR ]  redis:127.0.0.1:6379 unconnected!
+2018-04-23 01:04:24  [ main:15 ] - [ ERROR ]  redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)
+2018-04-23 01:04:24  [ main:16 ] - [ ERROR ]  redis:127.0.0.1:6379 unconnected!
+2018-04-23 01:04:24  [ main:17 ] - [ ERROR ]  redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)
+2018-04-23 01:04:25  [ xNbcPool-1-thread-1:1221 ] - [ ERROR ]  redis:127.0.0.1:6379 unconnected!
+2018-04-23 01:04:25  [ xNbcPool-1-thread-1:1221 ] - [ ERROR ]  redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)

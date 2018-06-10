@@ -1,0 +1,6 @@
+2017-03-12 11:39:56  [ main:0 ] - [ INFO ]  JAVA HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre
+2017-03-12 11:39:56  [ main:4 ] - [ INFO ]  OS Name=Mac OS X
+2017-03-12 11:39:56  [ main:5 ] - [ INFO ]  Me Path=/Users/dangfm/Documents/workspace/stocksocketclient/out/production/stocksocketclient
+2017-03-12 11:39:56  [ main:5 ] - [ INFO ]  当前最大可用内存:1820 M
+2017-03-12 11:39:56  [ main:221 ] - [ INFO ]  redis 127.0.0.1:6379 connected!
+2017-03-12 11:39:56  [ main:222 ] - [ INFO ]  redis 127.0.0.1:6379 connected!

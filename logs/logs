@@ -1,0 +1,13 @@
+2018-04-23 01:04:24  [ main:0 ] - [ ERROR ]  redis:127.0.0.1:6379 unconnected!
+2018-04-23 01:04:24  [ main:5 ] - [ ERROR ]  redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)
+2018-04-23 01:04:24  [ main:6 ] - [ ERROR ]  redis:127.0.0.1:6379 unconnected!
+2018-04-23 01:04:24  [ main:7 ] - [ ERROR ]  redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)
+2018-04-23 01:04:24  [ main:14 ] - [ ERROR ]  redis:127.0.0.1:6379 unconnected!
+2018-04-23 01:04:24  [ main:15 ] - [ ERROR ]  redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)
+2018-04-23 01:04:24  [ main:16 ] - [ ERROR ]  redis:127.0.0.1:6379 unconnected!
+2018-04-23 01:04:24  [ main:17 ] - [ ERROR ]  redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)
+2018-04-23 01:04:25  [ xNbcPool-1-thread-1:1094 ] - [ INFO ]  客户端启动成功连接行情服务器:114.55.140.140:9099
+2018-04-23 01:04:25  [ xNbcPool-1-thread-1:1221 ] - [ ERROR ]  redis:127.0.0.1:6379 unconnected!
+2018-04-23 01:04:25  [ xNbcPool-1-thread-1:1221 ] - [ ERROR ]  redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)
+2018-04-23 01:04:25  [ xNbcPool-1-thread-1:1225 ] - [ INFO ]  **********成功注册大师兄(dashixiong.cn)行情服务，以下是您的注册资料，请妥善保存。**********
+2018-04-23 01:04:25  [ xNbcPool-1-thread-1:1254 ] - [ INFO ]  {"app_key":"b9dbb4097f1c4a018f92030ce17c4cdb","app_password":"PZ1zYJ","app_id":1010,"app_secret":"e20616459e8348ef9234ca4342a6fc1d"}
