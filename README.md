@@ -116,12 +116,18 @@ get Stock_UpdownList_totalValue
 get Stock_UpdownList_circulationValue
 
 #除权数据
+
 hgetall ExRight_Tables
+
 hget ExRight_Tables 600000
 
+
 #财务数据
+
 hgetall Financial_Tables
+
 hget Financial_Tables 600000
+
  
 
 # 下载地址
