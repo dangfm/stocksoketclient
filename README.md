@@ -114,13 +114,21 @@ get Stock_UpdownList_totalValue
 #流通市值排行
 
 get Stock_UpdownList_circulationValue
+
+#除权数据
+hgetall ExRight_Tables
+hget ExRight_Tables 600000
+
+#财务数据
+hgetall Financial_Tables
+hget Financial_Tables 600000
  
 
 # 下载地址
 
 官方更新地址：
 
-http://www.dashixiong.cn/kline_free_api
+https://github.com/dangfm/stocksoketclient/
 
 QQ交流群：大师兄股票实时行情
 
