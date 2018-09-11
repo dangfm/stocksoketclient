@@ -50,14 +50,14 @@ public class CreateTimeLine extends Thread {
 
         }
 
-        logger.info("开始生成分钟线分时线进程");
+//        logger.info("开始生成分钟线分时线进程");
 
         // 先初始化所有分钟点位置
 //        initAllPoint();
 //        logger.info("分钟线线程加载初始化完成");
         // 接下来就是计算每个点的数据
         while (true){
-            if (FN.isStopTime("30 09")) {
+            if (FN.isStopTime("29 09")) {
 //                long t = System.currentTimeMillis();
                 createAll();
 //                t = System.currentTimeMillis() - t;
@@ -195,14 +195,14 @@ public class CreateTimeLine extends Thread {
                                         // 拿当前分钟的历史数据
                                         String oneStr = redis.getRedis().hget(hKey, filed);
                                         // 开高低收
-                                        double open, high, low, close, volumn, volumnPrice, price;
+                                        double open, high, low, close, volumn, volumnPrice, price,startVolumn;
                                         int date;
                                         String time = lastTime;
                                         date = Integer.parseInt(obj.getString("lastDate").replace("-", ""));
                                         price = obj.getDouble("price");
                                         volumn = obj.getDouble("volumn");
                                         volumnPrice = obj.getDouble("volumnPrice");
-
+                                        startVolumn = volumn;
                                         open = price;
                                         high = price;
                                         low = price;
@@ -211,7 +211,7 @@ public class CreateTimeLine extends Thread {
                                         if (oneStr != null) {
                                             if (!oneStr.isEmpty()) {
                                                 String[] one = oneStr.split(",");
-                                                if (one.length >= 8) {
+                                                if (one.length >= 9) {
                                                     int olddate = Integer.parseInt(one[0]);
                                                     // 看看时间是不是当天的
                                                     if (olddate == date) {
@@ -219,6 +219,7 @@ public class CreateTimeLine extends Thread {
                                                         high = Double.parseDouble(one[3]) > price ? Double.parseDouble(one[3]) : price;
                                                         low = Double.parseDouble(one[4]) < price ? Double.parseDouble(one[4]) : price;
                                                         close = price;
+                                                        startVolumn = Double.parseDouble(one[8]);
                                                     } else {
                                                         // 不是当天的时间就清理掉
                                                     }
@@ -227,7 +228,7 @@ public class CreateTimeLine extends Thread {
                                             }
                                         }
 
-                                        String value = date + "," + time + "," + open + "," + high + "," + low + "," + close + "," + volumn + "," + volumnPrice;
+                                        String value = date + "," + time + "," + open + "," + high + "," + low + "," + close + "," + volumn + "," + volumnPrice + "," + startVolumn;
 
                                         if (!filed.isEmpty()) {
 //                                            logger.info(hKey+filed+value);

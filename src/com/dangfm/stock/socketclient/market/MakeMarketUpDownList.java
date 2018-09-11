@@ -78,7 +78,7 @@ public class MakeMarketUpDownList extends Thread{
 
 
 
-        logger.info("开始计算行情涨跌幅线程");
+//        logger.info("开始计算行情涨跌幅线程");
         while (true){
             if (Config.isConnected) {
                 localRedis.select(Config.redisDB_stocks);
@@ -186,7 +186,7 @@ public class MakeMarketUpDownList extends Thread{
      * @param typeId
      * @return
      */
-    public JSONArray loadStocksWithTypeId(int typeId){
+    public JSONArray loadStocksWithTypeId(String typeId){
         JSONArray stocklist = new JSONArray();
         try {
             localRedis.select(Config.redisDB_stocks);
@@ -286,7 +286,7 @@ public class MakeMarketUpDownList extends Thread{
                 JSONObject obj = list.getJSONObject(i);
                 JSONObject newObj = new JSONObject();
                 String title = obj.getString("title");
-                int typeId = obj.getInt("id");
+                String typeId = obj.getString("id");
                 newObj.put("title",title);
                 newObj.put("id",typeId);
 
@@ -398,7 +398,7 @@ public class MakeMarketUpDownList extends Thread{
      * @param typeId 股票类型ID
      * @return
      */
-    public JSONObject createStocksEverageValue(int typeId){
+    public JSONObject createStocksEverageValue(String typeId){
         JSONObject obj = new JSONObject();
         JSONArray list = loadStocksWithTypeId(typeId);
 //        logger.info(list.toString());
@@ -463,10 +463,10 @@ public class MakeMarketUpDownList extends Thread{
         }
 
         if (j>0) {
-            double changeRateAvreage = (priceCount - closePriceCount) / closePriceCount * 100;
-
+            Double changeRateAvreage = (priceCount - closePriceCount) / closePriceCount * 100;
+            if (changeRateAvreage.isInfinite() || changeRateAvreage.isNaN() || closePriceCount<=0) changeRateAvreage = 0.00;
             try {
-                obj.put("changeRate", changeRateAvreage);
+                obj.put("changeRate", changeRateAvreage.doubleValue());
                 obj.put("code", maxcode);
             } catch (JSONException e) {
                 logger.error(e.toString());

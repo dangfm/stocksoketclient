@@ -77,7 +77,7 @@ public class SaveAllStocks {
                         }
                     }
                     redisCls.redis(Config.redisDB_stocks).set(key,value);
-                    logger.debug("接收保存股票分类表："+key);
+//                    logger.debug("接收保存股票分类表："+key);
                 }
 
             } catch (JSONException e) {
@@ -112,7 +112,7 @@ public class SaveAllStocks {
                         }
                     }
                     redisSearchCls.redis(Config.redisDB_Search).set(key,value);
-                    logger.debug("接收保存股票搜索表："+key);
+//                    logger.debug("接收保存股票搜索表："+key);
                 }
 
             } catch (JSONException e) {

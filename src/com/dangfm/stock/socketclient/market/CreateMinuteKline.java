@@ -25,7 +25,7 @@ public class CreateMinuteKline extends Thread {
     @Override
     public void run() {
         super.run();
-        logger.info("开始生成分钟K线");
+//        logger.info("开始生成分钟K线");
 
         getAllStocks();
 
@@ -47,7 +47,7 @@ public class CreateMinuteKline extends Thread {
                 if (a.length > 0) {
                     key = a[0];
                     createMinuteKlineWithCode(key);
-                    logger.info("" + key + " 分钟线生成完成" + i + "/" + list.length);
+                    System.out.println("" + key + " 分钟线生成完成" + i + "/" + list.length);
                 }
             }
         }
@@ -104,7 +104,7 @@ public class CreateMinuteKline extends Thread {
                         line = null;
                     }
                 }else{
-                    logger.debug("生成" + minute + "分钟k线的日期已经是最新的,无需生成");
+                    System.out.println("生成" + minute + "分钟k线的日期已经是最新的,无需生成");
                     return;
                 }
 
@@ -125,7 +125,7 @@ public class CreateMinuteKline extends Thread {
                 String savePath = cachePath + "" + minute + "min/" + code.toUpperCase() + ".txt";
                 try {
                     HttpWebCollecter.saveFile(savePath, newString);
-                    logger.info("生成" + minute+"分钟k线成功");
+                    System.out.println("生成" + minute+"分钟k线成功");
                 } catch (Exception e) {
                     logger.error(e.toString());
                 }
@@ -141,7 +141,7 @@ public class CreateMinuteKline extends Thread {
      */
     private JSONArray getOldMinuteData(String code,int minute){
         String minCachePath = cachePath+""+minute+"min/"+code.toUpperCase()+".txt";
-        logger.info(minute+"分钟原始数据路径"+minCachePath);
+        System.out.println(minute+"分钟原始数据路径"+minCachePath);
         String result = HttpWebCollecter.readFile(minCachePath);
         JSONArray line = new JSONArray();
         try {

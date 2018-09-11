@@ -226,6 +226,7 @@ public class StockResposeDatas {
                 JSONArray namekeys = names.getJSONArray(0);
                 if (obj!=null) {
                     String lastTime = "";
+                    String lastDate = "";
                     String key = obj.names().getString(0);
                     if (obj.has(key)) {
                         String sh000001_obj = null;
@@ -233,6 +234,7 @@ public class StockResposeDatas {
                         JSONObject shObj = FN.stoObj(sh000001_obj, namekeys);
                         if (shObj.length()>0) {
                             lastTime = shObj.getString("lastTime");
+                            lastDate = shObj.getString("lastDate");
                             stockCode = shObj.getString("code");
 //                            logger.info("接收到键值"+ namekeys);
 //                            logger.info(shObj.toString());
@@ -261,9 +263,13 @@ public class StockResposeDatas {
                     }
                     // 共享给其他服务用
                     Config.realtimeStockDatas = obj;
-//                    logger.info(obj.toString());
-                    logger.info("接收到实时行情"+keys.length()+"笔 "+stockCode+"最新时间：" + lastTime+" 当前时间："+FN.getDateWithFormat("HH:mm:ss",new Date())+" 总共"+stockRealTimes.length()+"个股票");
 
+                    Date d1 = FN.strToDate(lastDate+" "+lastTime,"yyyy-MM-dd HH:mm:ss");
+                    Date d2 = new Date();
+                    int s = (int)(d2.getTime() - d1.getTime())/1000;
+//                    logger.info(obj.toString());
+//                    logger.info("接收到实时行情"+keys.length()+"笔 "+stockCode+"最新时间：" + lastTime+" 当前时间："+FN.getDateWithFormat("HH:mm:ss",new Date())+" 总共"+stockRealTimes.length()+"个股票");
+                    System.out.println("接收到实时行情"+keys.length()+"笔 "+stockCode+"最新时间：" + lastTime+" 当前时间："+FN.getDateWithFormat("HH:mm:ss",new Date())+" 延时"+s+"秒 总共"+stockRealTimes.length()+"个股票");
                 }
                 obj = null;
             } catch (JSONException e) {

@@ -93,7 +93,7 @@ public class GetStockDaysLine extends Thread{
      */
     public void getMarket_Kline(String cycle){
         Set s = localRedis.redis(Config.redisDB_Search).keys("*");
-        logger.info("开始同步原始k线"+cycle+"数据" + s.size());
+        System.out.println("开始同步原始k线"+cycle+"数据" + s.size());
         Object[] list = s.toArray();
         for (int i=0;i<list.length;i++){
             try {
@@ -139,7 +139,7 @@ public class GetStockDaysLine extends Thread{
                                 FileHelper.makeDirs(path);
                                 // 保存到本地
                                 FileHelper.createFile(fileName,value);
-                                logger.info(i + "/" + list.length + " " + key + " k线"+cycle+"原始数据同步完成-外网");
+                                System.out.println(i + "/" + list.length + " " + key + " k线"+cycle+"原始数据同步完成-外网");
 
                             }
 
@@ -167,7 +167,7 @@ public class GetStockDaysLine extends Thread{
                                 FileHelper.makeDirs(path);
                                 // 保存到本地
                                 FileHelper.createFile(fileName,value);
-                                logger.info(i + "/" + list.length + " " + key + " k线"+cycle+"前复权数据同步完成-外网");
+                                System.out.println(i + "/" + list.length + " " + key + " k线"+cycle+"前复权数据同步完成-外网");
 
                             }
 
@@ -195,7 +195,7 @@ public class GetStockDaysLine extends Thread{
                                 FileHelper.makeDirs(path);
                                 // 保存到本地
                                 FileHelper.createFile(fileName,value);
-                                logger.info(i + "/" + list.length + " " + key + " k线"+cycle+"后复权数据同步完成-外网");
+                                System.out.println(i + "/" + list.length + " " + key + " k线"+cycle+"后复权数据同步完成-外网");
 
                             }
                             value = null;
@@ -248,7 +248,7 @@ public class GetStockDaysLine extends Thread{
                                         if (!lineDate.isEmpty()) {
                                             if (Integer.parseInt(lineDate) >= Integer.parseInt(lastDate)) {
                                                 // 已经有最新的K线数据了，不需要再采集
-                                                logger.info(i+"/"+code+"最新K数据已存在" + lineStr);
+                                                System.out.println(i+"/"+code+"最新K数据已存在" + lineStr);
                                                 isExit = true;
                                                 break;
                                             }

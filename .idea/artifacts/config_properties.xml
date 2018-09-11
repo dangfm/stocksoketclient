@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="config.properties">
+    <output-path>$PROJECT_DIR$/out/</output-path>
+    <root id="root">
+      <element id="file-copy" path="$PROJECT_DIR$/src/config.properties" />
+    </root>
+  </artifact>
+</component>

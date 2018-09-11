@@ -72,6 +72,7 @@ public class InitAllStockDatas extends Thread{
                                 JSONArray hangye = data.getJSONArray("hangye");
                                 JSONArray gainian = data.getJSONArray("gainian");
                                 JSONArray diqu = data.getJSONArray("diqu");
+//                                logger.info(hangye.toString());
                                 if (hangye!=null) {
                                     if (hangye.length() > 0)
                                         SaveAllStocks.saveAllStockType_hangye(hangye);
