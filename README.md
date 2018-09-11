@@ -7,7 +7,7 @@
 # 环境要求：
 JAVA JDK 1.8及以上，JDK下载地址：http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
-安装Reids环境
+安装Reids环境 下载地址https://redis.io/
 
 CPU 双核 4G内存及以上
  
@@ -22,9 +22,9 @@ redisPort = 6379
 
 redisPassword = 123456
 
-#k线web服务器 不可修改
+#路由 不可修改
 
-socketServer = http://kline.api.dashixiong.cn/v1/
+socketServer = http://114.55.140.140:8111/v1/
  
 #是否采集K线历史数据
 
