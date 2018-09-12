@@ -16,8 +16,10 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xsocket.connection.INonBlockingConnection;
+import redis.clients.jedis.Pipeline;
 import redis.clients.jedis.Protocol;
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Array;
 import java.net.URLDecoder;
@@ -50,6 +52,8 @@ public class StockResposeDatas {
      * 本地redis
      */
     private static RedisCls redisCls = new RedisCls();
+
+
 
     /**
      * 解析类
@@ -239,9 +243,11 @@ public class StockResposeDatas {
 //                            logger.info("接收到键值"+ namekeys);
 //                            logger.info(shObj.toString());
                         }
+                        shObj = null;
+                        sh000001_obj = null;
                     }
 
-
+                    Pipeline pipeline = redisCls.getRedis().pipelined();
 
                     // 写入redis
                     JSONArray keys = obj.names();
@@ -256,11 +262,20 @@ public class StockResposeDatas {
                                 /**
                                  * 这里写入redis
                                  */
-                                redisCls.setValue(code, shObj.toString());
+//                                redisCls.setValue(code, shObj.toString());
+                                pipeline.set(code,shObj.toString());
+
                             }
+                            jsonStr = null;
+                            shObj = null;
 
                         }
+                        code = null;
                     }
+                    pipeline.sync();
+                    pipeline.clear();
+                    pipeline.close();
+
                     // 共享给其他服务用
                     Config.realtimeStockDatas = obj;
 
@@ -270,10 +285,13 @@ public class StockResposeDatas {
 //                    logger.info(obj.toString());
 //                    logger.info("接收到实时行情"+keys.length()+"笔 "+stockCode+"最新时间：" + lastTime+" 当前时间："+FN.getDateWithFormat("HH:mm:ss",new Date())+" 总共"+stockRealTimes.length()+"个股票");
                     System.out.println("接收到实时行情"+keys.length()+"笔 "+stockCode+"最新时间：" + lastTime+" 当前时间："+FN.getDateWithFormat("HH:mm:ss",new Date())+" 延时"+s+"秒 总共"+stockRealTimes.length()+"个股票");
+                    keys = null;
                 }
                 obj = null;
             } catch (JSONException e) {
                 logger.error(e.toString());
+            } catch (IOException e) {
+                e.printStackTrace();
             }
 
     }

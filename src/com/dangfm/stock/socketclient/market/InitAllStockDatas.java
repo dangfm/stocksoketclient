@@ -85,8 +85,12 @@ public class InitAllStockDatas extends Thread{
                                     if (diqu.length() > 0)
                                         SaveAllStocks.saveAllStockType_diqu(diqu);
                                 }
+                                hangye = null;
+                                gainian = null;
+                                diqu = null;
                             }
                         }
+                        obj = null;
                     } catch (JSONException e) {
                         e.printStackTrace();
                         logger.error(e.toString());
@@ -95,6 +99,7 @@ public class InitAllStockDatas extends Thread{
                 }
             }
         }
+        html = null;
         logger.info("初始化所有股票板块分类数据-完成，用时："+(System.currentTimeMillis()-t)+"ms");
     }
 
@@ -153,9 +158,14 @@ public class InitAllStockDatas extends Thread{
                                                             // 这样可以避免中文名称不同而重复
                                                             String keys = (String) lists[j];
                                                             redisCls.redis(Config.redisDB_stocks).del(keys);
+                                                            keys = null;
                                                         }
+                                                        lists = null;
                                                     }
                                                     redisCls.redis(Config.redisDB_stocks).set(key,value);
+
+                                                    ss = null;
+                                                    item = null;
 
 
                                                 }
@@ -164,7 +174,10 @@ public class InitAllStockDatas extends Thread{
                                     }
                                 }
                             }
+                            data = null;
+
                         }
+                        obj = null;
                     } catch (JSONException e) {
                         e.printStackTrace();
                         logger.error(e.toString());
@@ -173,6 +186,7 @@ public class InitAllStockDatas extends Thread{
                 }
             }
         }
+        html = null;
         logger.info("初始化所有股票数据-完成，用时："+(System.currentTimeMillis()-t)+"ms");
     }
 
@@ -211,14 +225,20 @@ public class InitAllStockDatas extends Thread{
                                                     // 这样可以避免中文名称不同而重复
                                                     String keys = (String) lists[j];
                                                     redisCls.redis(Config.redisDB_Search).del(keys);
+                                                    keys = null;
                                                 }
+                                                lists = null;
                                             }
                                             redisCls.redis(Config.redisDB_Search).set(rows, rows);
+                                            ss = null;
                                         }
                                     }
+                                    rows = null;
                                 }
                             }
+                            data = null;
                         }
+                        obj = null;
                     } catch (JSONException e) {
                         e.printStackTrace();
                         logger.error(e.toString());
@@ -227,6 +247,7 @@ public class InitAllStockDatas extends Thread{
                 }
             }
         }
+        html = null;
         logger.info("初始化所有股票搜索库数据-完成，用时："+(System.currentTimeMillis()-t)+"ms");
     }
 
