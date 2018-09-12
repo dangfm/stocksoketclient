@@ -2,12 +2,13 @@
 
 客户端采用JAVA语言开发，支持Linux|Windows多平台运行，主要用来分发股市Level1实时行情。大师兄实时行情工具集成了股市实时行情，五档，财务数据以及板块涨跌幅榜，个股涨跌幅榜，日K、周K、月K、1分钟、5分钟、15分钟、30分钟、60分钟K线历史数据于一体，采用Redis缓存数据库进行存储，快速便捷。数据使用也非常方便，不用复杂的计算，基本都是拿来就用，任何人都无须股市知识的情况下灵活使用。现在推出公测版，因为服务器资源有限，视情况切断试用通道，理解万岁！！！
 
+ 基于此客户端的PHP版API接口下载地址：https://github.com/dangfm/KLineApi
  
 
 # 环境要求：
 JAVA JDK 1.8及以上，JDK下载地址：http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
-安装Reids环境
+安装Reids环境 下载地址https://redis.io/
 
 CPU 双核 4G内存及以上
  
@@ -22,9 +23,9 @@ redisPort = 6379
 
 redisPassword = 123456
 
-#k线web服务器 不可修改
+#路由 不可修改
 
-socketServer = http://kline.api.dashixiong.cn/v1/
+socketServer = http://114.55.140.140:8111/v1/
  
 #是否采集K线历史数据
 
@@ -114,13 +115,27 @@ get Stock_UpdownList_totalValue
 #流通市值排行
 
 get Stock_UpdownList_circulationValue
+
+#除权数据
+
+hgetall ExRight_Tables
+
+hget ExRight_Tables 600000
+
+
+#财务数据
+
+hgetall Financial_Tables
+
+hget Financial_Tables 600000
+
  
 
 # 下载地址
 
 官方更新地址：
 
-http://www.dashixiong.cn/kline_free_api
+https://github.com/dangfm/stocksoketclient/
 
 QQ交流群：大师兄股票实时行情
 
