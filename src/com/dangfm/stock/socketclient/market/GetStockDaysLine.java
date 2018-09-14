@@ -145,58 +145,60 @@ public class GetStockDaysLine extends Thread{
 
                             sleep(1000);
 
-                            params = "code=" + key + "&cycle="+cycle+"&fq=before&page=1&pageSize="+pageSize;
-                            t = System.currentTimeMillis();
-                            token = FN.MD5(params+t+Config.appKey+Config.appSecret);
-                            params = params + "&t="+t+"&app_key="+Config.appKey+"&token="+token;
-                            url = Config.socketServer+Config.socketServer_kline + "?"+params;
-                            loopTime = 0;
-                            value = getContent(url);
-                            if (!value.isEmpty()) {
-                                // 如果是1分钟，检查拿到的是数据是否是最新日期的
-                                if (cycle.equals("min1")&&!klineData.isEmpty()){
-                                    if (!checkDataIsNewDate(value,key,i)){
-                                        continue;
-                                    }else{
-                                        // 合并增量
-                                        value = klineData.replace("]","")+","+value.replace("[","");
+                            if (Config.isCollectionHistoryMinKline_fq) {
+                                params = "code=" + key + "&cycle=" + cycle + "&fq=before&page=1&pageSize=" + pageSize;
+                                t = System.currentTimeMillis();
+                                token = FN.MD5(params + t + Config.appKey + Config.appSecret);
+                                params = params + "&t=" + t + "&app_key=" + Config.appKey + "&token=" + token;
+                                url = Config.socketServer + Config.socketServer_kline + "?" + params;
+                                loopTime = 0;
+                                value = getContent(url);
+                                if (!value.isEmpty()) {
+                                    // 如果是1分钟，检查拿到的是数据是否是最新日期的
+                                    if (cycle.equals("min1") && !klineData.isEmpty()) {
+                                        if (!checkDataIsNewDate(value, key, i)) {
+                                            continue;
+                                        } else {
+                                            // 合并增量
+                                            value = klineData.replace("]", "") + "," + value.replace("[", "");
+                                        }
                                     }
+                                    path = klinePath + "/" + cycle + "/before/";
+                                    fileName = path + key.toUpperCase() + ".txt";
+                                    FileHelper.makeDirs(path);
+                                    // 保存到本地
+                                    FileHelper.createFile(fileName, value);
+                                    System.out.println(i + "/" + list.length + " " + key + " k线" + cycle + "前复权数据同步完成-外网");
+
                                 }
-                                path = klinePath+"/"+cycle+"/before/";
-                                fileName = path+key.toUpperCase()+".txt";
-                                FileHelper.makeDirs(path);
-                                // 保存到本地
-                                FileHelper.createFile(fileName,value);
-                                System.out.println(i + "/" + list.length + " " + key + " k线"+cycle+"前复权数据同步完成-外网");
 
-                            }
+                                sleep(1000);
 
-                            sleep(1000);
-
-                            params = "code=" + key + "&cycle="+cycle+"&fq=after&page=1&pageSize="+pageSize;
-                            t = System.currentTimeMillis();
-                            token = FN.MD5(params+t+Config.appKey+Config.appSecret);
-                            params = params + "&t="+t+"&app_key="+Config.appKey+"&token="+token;
-                            url = Config.socketServer+Config.socketServer_kline + "?"+params;
-                            loopTime = 0;
-                            value = getContent(url);
-                            if (!value.isEmpty()) {
-                                // 如果是1分钟，检查拿到的是数据是否是最新日期的
-                                if (cycle.equals("min1")&&!klineData.isEmpty()){
-                                    if (!checkDataIsNewDate(value,key,i)){
-                                        continue;
-                                    }else{
-                                        // 合并增量
-                                        value = klineData.replace("]","")+","+value.replace("[","");
+                                params = "code=" + key + "&cycle=" + cycle + "&fq=after&page=1&pageSize=" + pageSize;
+                                t = System.currentTimeMillis();
+                                token = FN.MD5(params + t + Config.appKey + Config.appSecret);
+                                params = params + "&t=" + t + "&app_key=" + Config.appKey + "&token=" + token;
+                                url = Config.socketServer + Config.socketServer_kline + "?" + params;
+                                loopTime = 0;
+                                value = getContent(url);
+                                if (!value.isEmpty()) {
+                                    // 如果是1分钟，检查拿到的是数据是否是最新日期的
+                                    if (cycle.equals("min1") && !klineData.isEmpty()) {
+                                        if (!checkDataIsNewDate(value, key, i)) {
+                                            continue;
+                                        } else {
+                                            // 合并增量
+                                            value = klineData.replace("]", "") + "," + value.replace("[", "");
+                                        }
                                     }
-                                }
-                                path = klinePath+"/"+cycle+"/after/";
-                                fileName = path+key.toUpperCase()+".txt";
-                                FileHelper.makeDirs(path);
-                                // 保存到本地
-                                FileHelper.createFile(fileName,value);
-                                System.out.println(i + "/" + list.length + " " + key + " k线"+cycle+"后复权数据同步完成-外网");
+                                    path = klinePath + "/" + cycle + "/after/";
+                                    fileName = path + key.toUpperCase() + ".txt";
+                                    FileHelper.makeDirs(path);
+                                    // 保存到本地
+                                    FileHelper.createFile(fileName, value);
+                                    System.out.println(i + "/" + list.length + " " + key + " k线" + cycle + "后复权数据同步完成-外网");
 
+                                }
                             }
                             value = null;
                         }

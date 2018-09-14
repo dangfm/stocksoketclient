@@ -44,6 +44,10 @@ public class Config {
      * 是否采集历史分钟线数据
      */
     public static final boolean isCollectionHistoryMinKline = Boolean.parseBoolean(FN.getProperty("isCollectionHistoryMinKline"));
+    /**
+     * 是否采集历史分钟线复权数据
+     */
+    public static final boolean isCollectionHistoryMinKline_fq = Boolean.parseBoolean(FN.getProperty("isCollectionHistoryMinKline_fq"));
 
     // JAVA 安装路径
     public static final String javaHome = System.getProperty("java.home");
@@ -66,6 +70,10 @@ public class Config {
     public static String redisKey_Diqu_tables = "Diqu_Tables";
     // 个股涨跌幅缓存key
     public static String redisKey_Stock_UpdownList = "Stock_UpdownList";
+    // 除权列表key
+    public static String redisKey_exright_tables = "ExRight_Tables";
+    // 财务列表key
+    public static String redisKey_financial_tables = "Financial_Tables";
 
     // 保存推送过来的实时每笔动态数据
     public static JSONObject realtimeStockDatas = new JSONObject();

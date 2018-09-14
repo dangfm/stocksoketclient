@@ -1,0 +1,23 @@
+2018-04-23 01:04:24  [ main:0 ] - [ ERROR ]  redis:127.0.0.1:6379 unconnected!
+2018-04-23 01:04:24  [ main:5 ] - [ ERROR ]  redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)
+2018-04-23 01:04:24  [ main:6 ] - [ ERROR ]  redis:127.0.0.1:6379 unconnected!
+2018-04-23 01:04:24  [ main:7 ] - [ ERROR ]  redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)
+2018-04-23 01:04:24  [ main:14 ] - [ ERROR ]  redis:127.0.0.1:6379 unconnected!
+2018-04-23 01:04:24  [ main:15 ] - [ ERROR ]  redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)
+2018-04-23 01:04:24  [ main:16 ] - [ ERROR ]  redis:127.0.0.1:6379 unconnected!
+2018-04-23 01:04:24  [ main:17 ] - [ ERROR ]  redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)
+2018-04-23 01:04:25  [ xNbcPool-1-thread-1:1094 ] - [ INFO ]  客户端启动成功连接行情服务器:114.55.140.140:9099
+2018-04-23 01:04:25  [ xNbcPool-1-thread-1:1221 ] - [ ERROR ]  redis:127.0.0.1:6379 unconnected!
+2018-04-23 01:04:25  [ xNbcPool-1-thread-1:1221 ] - [ ERROR ]  redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)
+2018-04-23 01:04:25  [ xNbcPool-1-thread-1:1225 ] - [ INFO ]  **********成功注册大师兄(dashixiong.cn)行情服务，以下是您的注册资料，请妥善保存。**********
+2018-04-23 01:04:25  [ xNbcPool-1-thread-1:1254 ] - [ INFO ]  {"app_key":"b9dbb4097f1c4a018f92030ce17c4cdb","app_password":"PZ1zYJ","app_id":1010,"app_secret":"e20616459e8348ef9234ca4342a6fc1d"}
+2018-09-01 19:56:04  [ xNbcPool-1-thread-1:0 ] - [ INFO ]  客户端启动成功连接行情服务器:114.55.140.140:9099
+2018-09-01 19:56:04  [ xNbcPool-1-thread-1:6 ] - [ INFO ]  **********成功注册大师兄(dashixiong.cn)行情服务，以下是您的注册资料，请妥善保存。**********
+2018-09-01 19:56:04  [ xNbcPool-1-thread-1:20 ] - [ INFO ]  {"app_key":"2b48345281a449d5be601a20456ada6b","app_password":"zawgXc","app_id":1023,"app_secret":"d4ab3ee6053545c598e43cc1cdac43e3"}
+2018-09-01 19:56:05  [ xNbcPool-1-thread-2:1050 ] - [ INFO ]  **********欢迎访问大师兄(dashixiong.cn)行情数据服务 v1.0**********
+2018-09-01 19:56:05  [ Thread-11:1068 ] - [ INFO ]  开始初始化数据...
+2018-09-01 19:56:16  [ Thread-11:12134 ] - [ INFO ]  初始化所有股票板块分类数据-完成，用时：62ms
+2018-09-01 19:56:17  [ Thread-11:13576 ] - [ INFO ]  初始化所有股票数据-完成，用时：1442ms
+2018-09-01 19:56:18  [ Thread-11:14438 ] - [ INFO ]  初始化所有股票搜索库数据-完成，用时：861ms
+2018-09-01 19:56:21  [ Thread-11:17554 ] - [ INFO ]  初始化所有股票实时行情数据-完成，用时：3116ms
+2018-09-01 20:00:00  [ pool-1-thread-2:235701 ] - [ INFO ]  未开启采集K线开关，如需采集历史K线数据请设置配置文件 isCollectionHistoryKline=true

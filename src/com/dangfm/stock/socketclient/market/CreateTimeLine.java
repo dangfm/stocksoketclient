@@ -57,7 +57,7 @@ public class CreateTimeLine extends Thread {
 //        logger.info("分钟线线程加载初始化完成");
         // 接下来就是计算每个点的数据
         while (true){
-            if (FN.isStopTime("29 09")) {
+            if (FN.isStopTime("15 09")) {
 //                long t = System.currentTimeMillis();
                 createAll();
 //                t = System.currentTimeMillis() - t;
@@ -114,9 +114,9 @@ public class CreateTimeLine extends Thread {
      */
     private void initOnePoint(String code){
         String key = code+"_today";
-        long startTime = FN.getTimeMillis("09:30:00");
-        for (int i=0;i<=330;i++){
-            if (i<=120 || i>210){
+        long startTime = FN.getTimeMillis("09:25:00");
+        for (int i=0;i<=335;i++){
+            if (i<=125 || i>215){
                 String filed = FN.getDateWithFormat("HHmm",new Date(startTime));
                 String value = "";
                 if (!filed.isEmpty()) {

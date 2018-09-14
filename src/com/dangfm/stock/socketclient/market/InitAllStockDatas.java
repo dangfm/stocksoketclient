@@ -19,6 +19,8 @@ public class InitAllStockDatas extends Thread{
     public static final Logger logger = LoggerFactory.getLogger(InitAllStockDatas.class);
     private static RedisCls redisCls = new RedisCls();
     private static RedisCls localRedis = new RedisCls();
+    private static RedisCls exRedis = new RedisCls();
+    private static RedisCls fiRedis = new RedisCls();
 
     public InitAllStockDatas(){
 
@@ -47,6 +49,10 @@ public class InitAllStockDatas extends Thread{
         initSearchStocks();
         // 初始化所有股票实时行情
         initStockRealtimeQuotes();
+        // 初始化财务数据
+        initStockFinance();
+        // 初始化除权数据
+        initStockExrights();
     }
 
     /**
@@ -311,6 +317,108 @@ public class InitAllStockDatas extends Thread{
         }
         html = null;
         logger.info("初始化所有股票实时行情数据-完成，用时："+(System.currentTimeMillis()-t)+"ms");
+    }
+
+    /**
+     * 初始化请求股票除权数据
+     * http://kline.api.dashixiong.cn/V1/exrights.php
+     */
+    private void initStockExrights(){
+
+        long t = System.currentTimeMillis();
+        String params = "";
+        String token = FN.MD5(params+t+Config.appKey+Config.appSecret);
+        params = params + "t="+t+"&app_key="+Config.appKey+"&token="+token;
+        String url = Config.socketServer+"/exrights.php?"+params;
+//        logger.info("开始初始化所有股票搜索库数据"+url);
+        String html = HttpWebCollecter.getWebContent(url);
+        if (html!=null){
+            if (!html.isEmpty()){
+                if (html.startsWith("{")){
+                    try {
+                        JSONObject obj = new JSONObject(html);
+                        if (obj!=null){
+                            JSONObject data = obj.getJSONObject("data");
+                            if (data!=null){
+                                JSONArray keys = data.names();
+                                for (int i = 0; i < keys.length(); i++) {
+                                    String key = keys.getString(i);
+                                    String value = data.getString(key);
+                                    if (value.length()>0) {
+                                        /**
+                                         * 这里写入redis
+                                         */
+                                        exRedis.redis(Config.redisDB_upDown).hset(Config.redisKey_exright_tables,key,value);
+                                    }
+                                    value = null;
+                                    key = null;
+                                }
+                                keys = null;
+                            }
+                            data = null;
+                        }
+                        obj = null;
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        logger.error(e.toString());
+                    }
+
+                }
+            }
+        }
+        html = null;
+        logger.info("初始化所有股票除权数据-完成，用时："+(System.currentTimeMillis()-t)+"ms");
+    }
+
+    /**
+     * 初始化请求股票财务数据
+     * http://kline.api.dashixiong.cn/V1/finance.php
+     */
+    private void initStockFinance(){
+
+        long t = System.currentTimeMillis();
+        String params = "";
+        String token = FN.MD5(params+t+Config.appKey+Config.appSecret);
+        params = params + "t="+t+"&app_key="+Config.appKey+"&token="+token;
+        String url = Config.socketServer+"/finance.php?"+params;
+//        logger.info("开始初始化所有股票搜索库数据"+url);
+        String html = HttpWebCollecter.getWebContent(url);
+        if (html!=null){
+            if (!html.isEmpty()){
+                if (html.startsWith("{")){
+                    try {
+                        JSONObject obj = new JSONObject(html);
+                        if (obj!=null){
+                            JSONObject data = obj.getJSONObject("data");
+                            if (data!=null){
+                                JSONArray keys = data.names();
+                                for (int i = 0; i < keys.length(); i++) {
+                                    String key = keys.getString(i);
+                                    String value = data.getString(key);
+                                    if (value.length()>0) {
+                                        /**
+                                         * 这里写入redis
+                                         */
+                                        exRedis.redis(Config.redisDB_upDown).hset(Config.redisKey_financial_tables,key,value);
+                                    }
+                                    value = null;
+                                    key = null;
+                                }
+                                keys = null;
+                            }
+                            data = null;
+                        }
+                        obj = null;
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        logger.error(e.toString());
+                    }
+
+                }
+            }
+        }
+        html = null;
+        logger.info("初始化所有股票财务数据-完成，用时："+(System.currentTimeMillis()-t)+"ms");
     }
 }
 
