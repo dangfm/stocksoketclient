@@ -38,9 +38,11 @@ public class GetStockDaysLine extends Thread{
     private static RedisCls localRedis = new RedisCls();
     private static RedisCls redis = new RedisCls();
 
-    public GetStockDaysLine(){
+    // 是否全量更新
+    private boolean isAll = false;
 
-
+    public GetStockDaysLine(boolean all){
+        isAll = all;
     }
 
     @Override
@@ -51,6 +53,8 @@ public class GetStockDaysLine extends Thread{
             if (FN.getWeekOfDate(new Date(System.currentTimeMillis())).equals("6") ||
                     FN.getWeekOfDate(new Date(System.currentTimeMillis())).equals("7")) {
                 logger.info("日k采集周六日不运行");
+                // 周六日全量更新
+                isAll = true;
 //            return;
             }
             getMarket();
@@ -95,6 +99,11 @@ public class GetStockDaysLine extends Thread{
         Set s = localRedis.redis(Config.redisDB_Search).keys("*");
         System.out.println("开始同步原始k线"+cycle+"数据" + s.size());
         Object[] list = s.toArray();
+        int pageSize = 100000;
+        boolean isExit = false;
+        String fileName = "";
+        String klineData = "";
+        int sleeptime = 1000;
         for (int i=0;i<list.length;i++){
             try {
                 String key = (String) list[i];
@@ -103,17 +112,20 @@ public class GetStockDaysLine extends Thread{
                     //System.out.println(a[0]);
                     if (a.length > 0) {
                         key = a[0];
-                        String path = klinePath+"/"+cycle+"/after/";
-                        String fileName = path+key.toUpperCase()+".txt";
-                        String klineData = FileHelper.readToString(fileName);
-                        String lastDate = "";
-                        // 检查有没有最新的k线数据
-                        boolean isExit = checkDataIsNewDate(klineData,key,i);
-                        if (isExit) continue;
-
-                        int pageSize = 100000;
-                        if (cycle.equals("min1")){
-                            if (!klineData.isEmpty()) pageSize = 240;
+                        String path = klinePath + "/" + cycle + "/after/";
+                        if (!Config.isCollectionHistoryMinKline_fq && cycle.equals("min1")) {
+                            path = klinePath + "/" + cycle + "/data/";
+                        }
+                        fileName = path + key.toUpperCase() + ".txt";
+                        if (!isAll) {
+                            klineData = FileHelper.readToString(fileName);
+                            String lastDate = "";
+                            // 检查有没有最新的k线数据
+                            isExit = checkDataIsNewDate(klineData, key, i);
+                            if (isExit) continue;
+                            if (cycle.equals("min1")) {
+                                if (!klineData.isEmpty()) pageSize = 240;
+                            }
                         }
 
                         if (!isExit) {
@@ -126,35 +138,7 @@ public class GetStockDaysLine extends Thread{
                             String value = getContent(url);
                             if (!value.isEmpty()) {
                                 // 如果是1分钟，检查拿到的是数据是否是最新日期的
-                                if (cycle.equals("min1")&&!klineData.isEmpty()){
-                                    if (!checkDataIsNewDate(value,key,i)){
-                                        continue;
-                                    }else{
-                                        // 合并增量
-                                        value = klineData.replace("]","")+","+value.replace("[","");
-                                    }
-                                }
-                                path = klinePath+"/"+cycle+"/data/";
-                                fileName = path+key.toUpperCase()+".txt";
-                                FileHelper.makeDirs(path);
-                                // 保存到本地
-                                FileHelper.createFile(fileName,value);
-                                System.out.println(i + "/" + list.length + " " + key + " k线"+cycle+"原始数据同步完成-外网");
-
-                            }
-
-                            sleep(1000);
-
-                            if (Config.isCollectionHistoryMinKline_fq) {
-                                params = "code=" + key + "&cycle=" + cycle + "&fq=before&page=1&pageSize=" + pageSize;
-                                t = System.currentTimeMillis();
-                                token = FN.MD5(params + t + Config.appKey + Config.appSecret);
-                                params = params + "&t=" + t + "&app_key=" + Config.appKey + "&token=" + token;
-                                url = Config.socketServer + Config.socketServer_kline + "?" + params;
-                                loopTime = 0;
-                                value = getContent(url);
-                                if (!value.isEmpty()) {
-                                    // 如果是1分钟，检查拿到的是数据是否是最新日期的
+                                if (!isAll) {
                                     if (cycle.equals("min1") && !klineData.isEmpty()) {
                                         if (!checkDataIsNewDate(value, key, i)) {
                                             continue;
@@ -163,16 +147,48 @@ public class GetStockDaysLine extends Thread{
                                             value = klineData.replace("]", "") + "," + value.replace("[", "");
                                         }
                                     }
+                                }
+                                path = klinePath+"/"+cycle+"/data/";
+                                fileName = path+key.toUpperCase()+".txt";
+                                FileHelper.makeDirs(path);
+                                // 保存到本地
+                                FileHelper.createFile(fileName,value);
+                                System.out.println(i + "/" + list.length + " " + key + " k线"+cycle+"原始数据同步完成-外网"+(isAll?"全量":"增量"));
+
+                            }
+
+                            sleep(sleeptime);
+
+                            if (Config.isCollectionHistoryMinKline_fq || cycle.equals("day")) {
+                                params = "code=" + key + "&cycle=" + cycle + "&fq=before&page=1&pageSize=" + pageSize;
+                                t = System.currentTimeMillis();
+                                token = FN.MD5(params + t + Config.appKey + Config.appSecret);
+                                params = params + "&t=" + t + "&app_key=" + Config.appKey + "&token=" + token;
+                                url = Config.socketServer + Config.socketServer_kline + "?" + params;
+                                loopTime = 0;
+                                value = getContent(url);
+                                if (!value.isEmpty()) {
+                                    if (!isAll) {
+                                        // 如果是1分钟，检查拿到的是数据是否是最新日期的
+                                        if (cycle.equals("min1") && !klineData.isEmpty()) {
+                                            if (!checkDataIsNewDate(value, key, i)) {
+                                                continue;
+                                            } else {
+                                                // 合并增量
+                                                value = klineData.replace("]", "") + "," + value.replace("[", "");
+                                            }
+                                        }
+                                    }
                                     path = klinePath + "/" + cycle + "/before/";
                                     fileName = path + key.toUpperCase() + ".txt";
                                     FileHelper.makeDirs(path);
                                     // 保存到本地
                                     FileHelper.createFile(fileName, value);
-                                    System.out.println(i + "/" + list.length + " " + key + " k线" + cycle + "前复权数据同步完成-外网");
+                                    System.out.println(i + "/" + list.length + " " + key + " k线" + cycle + "前复权数据同步完成-外网"+(isAll?"全量":"增量"));
 
                                 }
 
-                                sleep(1000);
+                                sleep(sleeptime);
 
                                 params = "code=" + key + "&cycle=" + cycle + "&fq=after&page=1&pageSize=" + pageSize;
                                 t = System.currentTimeMillis();
@@ -182,13 +198,15 @@ public class GetStockDaysLine extends Thread{
                                 loopTime = 0;
                                 value = getContent(url);
                                 if (!value.isEmpty()) {
-                                    // 如果是1分钟，检查拿到的是数据是否是最新日期的
-                                    if (cycle.equals("min1") && !klineData.isEmpty()) {
-                                        if (!checkDataIsNewDate(value, key, i)) {
-                                            continue;
-                                        } else {
-                                            // 合并增量
-                                            value = klineData.replace("]", "") + "," + value.replace("[", "");
+                                    if (!isAll) {
+                                        // 如果是1分钟，检查拿到的是数据是否是最新日期的
+                                        if (cycle.equals("min1") && !klineData.isEmpty()) {
+                                            if (!checkDataIsNewDate(value, key, i)) {
+                                                continue;
+                                            } else {
+                                                // 合并增量
+                                                value = klineData.replace("]", "") + "," + value.replace("[", "");
+                                            }
                                         }
                                     }
                                     path = klinePath + "/" + cycle + "/after/";
@@ -196,7 +214,7 @@ public class GetStockDaysLine extends Thread{
                                     FileHelper.makeDirs(path);
                                     // 保存到本地
                                     FileHelper.createFile(fileName, value);
-                                    System.out.println(i + "/" + list.length + " " + key + " k线" + cycle + "后复权数据同步完成-外网");
+                                    System.out.println(i + "/" + list.length + " " + key + " k线" + cycle + "后复权数据同步完成-外网"+(isAll?"全量":"增量"));
 
                                 }
                             }
@@ -212,7 +230,7 @@ public class GetStockDaysLine extends Thread{
             }
 
             try {
-                sleep(1000);
+                sleep(sleeptime);
             } catch (InterruptedException e) {
 
             }

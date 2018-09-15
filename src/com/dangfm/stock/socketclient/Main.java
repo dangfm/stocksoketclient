@@ -60,10 +60,10 @@ public class Main {
              */
             FN.createExecutor("9:00:00", 0, new CreateTimeLine(), args0 == 1 ? true : false,executor);
             /**
-             * 同步K线数据
+             * 同步K线数据 参数2是全量更新K线，周六日默认都是全量更新的
              */
-            FN.createExecutor("20:00:00", 0, new GetStockDaysLine(), args0 == 3 ? true : false,executor);
-            FN.createExecutor("7:00:00", 0, new GetStockDaysLine(), false,executor);
+            FN.createExecutor("20:00:00", 0, new GetStockDaysLine(args0==2), (args0 == 3 || args0==2) ? true : false,executor);
+            FN.createExecutor("7:00:00", 0, new GetStockDaysLine(false), false,executor);
 
             // 生成历史k线
 //        createExecutor("15:10:00", 0, new CreateMinuteKline(), args0 == 2 ? true : false);
