@@ -513,11 +513,10 @@ public class FN {
         return obj;
     }
 
-    public static final int getProcessID() {
+    public static final String getProcessID() {
         RuntimeMXBean runtimeMXBean = ManagementFactory.getRuntimeMXBean();
 //        System.out.println(runtimeMXBean.getName());
-        return Integer.valueOf(runtimeMXBean.getName().split("@")[0])
-                .intValue();
+        return runtimeMXBean.getName().split("@")[0];
     }
     // 重启杀掉同伴
     public static boolean reStart(){
@@ -576,7 +575,7 @@ public class FN {
                     String id = s[0];
 //                    System.out.println("同伴进程ID：" + id + " 我的ID：" + FN.getProcessID());
                     try {
-                        if (FN.getProcessID() != Integer.parseInt(id))
+                        if (!FN.getProcessID().equals(id))
                             process = Runtime.getRuntime().exec("kill " + id);
                     } catch (IOException e) {
                         e.printStackTrace();
