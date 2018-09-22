@@ -6,6 +6,8 @@
 
  基于此客户端的PHP版API接口下载地址：https://github.com/dangfm/KLineApi
  
+ 基于此行情得移动端DEMO下载地址：https://app.download.ebamai.com/sniper/index.php（狙击手APP）
+ 
 
 # 环境要求：
 JAVA JDK 1.8及以上，JDK下载地址：http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
