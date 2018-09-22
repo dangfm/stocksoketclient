@@ -6,7 +6,7 @@
 
  基于此客户端的PHP版API接口下载地址：https://github.com/dangfm/KLineApi
  
- 基于此行情得移动端DEMO下载地址：https://app.download.ebamai.com/sniper/index.php（狙击手APP）
+ 基于此行情得移动端DEMO（狙击手APP）下载地址：https://app.download.ebamai.com/sniper/index.php
  
 
 # 环境要求：
