@@ -4,9 +4,11 @@
 
 目前只支持A股行情，实时行情延时3秒左右
 
- 基于此客户端的PHP版API接口下载地址：https://github.com/dangfm/KLineApi
+ 
  
 # 接口DEMO：
+
+基于此客户端的PHP版API接口下载地址：https://github.com/dangfm/KLineApi
 
 1、实时行情接口：http://kline.api.shqingsi.cn/v1/quotes.php?code=sh000001,sh600000
 
