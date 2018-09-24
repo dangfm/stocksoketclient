@@ -6,7 +6,7 @@
 
  
  
-# 接口DEMO：
+## 接口DEMO：
 
 基于此客户端的PHP版API接口下载地址：https://github.com/dangfm/KLineApi
 
@@ -36,7 +36,7 @@
  基于此行情得移动端DEMO（狙击手APP）下载地址：https://app.download.ebamai.com/sniper/index.php
  
 
-# 环境要求：
+## 环境要求：
 JAVA JDK 1.8及以上，JDK下载地址：http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
 安装Reids环境 下载地址https://redis.io/
@@ -44,7 +44,7 @@ JAVA JDK 1.8及以上，JDK下载地址：http://www.oracle.com/technetwork/java
 CPU 双核 4G内存及以上
  
 
-# 配置config.properties：
+## 配置config.properties：
 
 #本地redis
 
@@ -71,7 +71,7 @@ isCollectionHistoryMinKline = false
 klineSavePath =
 
 
-# 运行：
+## 运行：
 
 启动：
 
@@ -86,7 +86,7 @@ java -jar /data/stocksocketclient/stocksocketclient.jar 1
 java -jar /data/stocksocketclient/stocksocketclient.jar 3
  
 
-# 数据使用方式：
+## 数据使用方式：
 
 #运行初始化后即可在redis找到实时行情数据，具体操作步骤如下：
 
@@ -162,7 +162,7 @@ hget Financial_Tables 600000
 
  
 
-# 下载地址
+## 下载地址
 
 官方更新地址：
 
