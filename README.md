@@ -8,29 +8,185 @@
  
 ## 接口DEMO：
 
-基于此客户端的PHP版API接口下载地址：https://github.com/dangfm/KLineApi
-
 1、实时行情接口：http://kline.api.shqingsi.cn/v1/quotes.php?code=sh000001,sh600000
 
+返回字段：
+
+lastTime：最新时间
+
+lastDate：最新日期
+
+code：股票代码
+
+name：股票名称
+
+volumnPrice：成交额 单位元
+
+volumn：成交量
+
+circulationValue：流通市值
+
+totalValue：总市值
+
+type：0=个股 1=指数
+
+isStop：是否停牌 1=停牌
+
+peRatio：市盈率
+
+swing：振幅
+
+turnoverRate：换手率
+
+cityNetRate：市净率
+
+price：当前价格
+
+openPrice：开盘价
+
+highPrice：最高价
+
+lowPrice：最低价
+
+closePrice：收盘价
+
+sell_5：卖五价格
+
+sell_4：卖四价格
+
+sell_3：卖三价格
+
+sell_2：卖二价格
+
+sell_1：卖一价格
+
+sell_5_s：卖五数量
+
+sell_4_s：卖四数量
+
+sell_3_s：卖三数量
+
+sell_2_s：卖二数量
+
+sell_1_s：卖一数量
+
+buy_5：买五价格
+
+buy_4：买四价格
+
+buy_3：买三价格
+
+buy_2：买二价格
+
+buy_1：买一价格
+
+buy_5_s：买五数量
+
+buy_4_s：买四数量
+
+buy_3_s：买三数量
+
+buy_2_s：买二数量
+
+buy_1_s：买一数量
+
+
+
+
+
 2、分时图接口：http://kline.api.shqingsi.cn/v1/kline.php?code=sh000001&cycle=timeline&fq=data
+
+返回数组：
+
+数组格式为：[日期，时间，价格，成交量，成交额]
+
 
 3、K线图接口：
 
   日线（不复权）：http://kline.api.shqingsi.cn/v1/kline.php?code=sh000001&cycle=day&fq=data
+
+  返回数组：
+
+  数组格式为：[日期，开盘价，最高价，最低价，收盘价，成交量，成交额]
+
   
   日线（前复权）：http://kline.api.shqingsi.cn/v1/kline.php?code=sh000001&cycle=day&fq=before
+
+  返回数组：
+
+  数组格式为：[日期，开盘价，最高价，最低价，收盘价，成交量，成交额]
+
   
   日线（后复权）：http://kline.api.shqingsi.cn/v1/kline.php?code=sh000001&cycle=day&fq=after
+
+  返回数组：
+
+  数组格式为：[日期，开盘价，最高价，最低价，收盘价，成交量，成交额]
+
   
   周线：http://kline.api.shqingsi.cn/v1/kline.php?code=sh000001&cycle=week&fq=data
+
+  返回数组：
+
+  数组格式为：[日期，开盘价，最高价，最低价，收盘价，成交量，成交额]
+
   
   月线：http://kline.api.shqingsi.cn/v1/kline.php?code=sh000001&cycle=month&fq=data
+
+  返回数组：
+
+  数组格式为：[日期，开盘价，最高价，最低价，收盘价，成交量，成交额]
+
   
 4、搜索股票：http://kline.api.shqingsi.cn/v1/search.php?key=0001
 
-5、行业概念地区涨幅榜：http://kline.api.shqingsi.cn/v1/plateranking.php
+  返回数组：
 
-6、个股涨幅榜：http://kline.api.shqingsi.cn/v1/updownlist.php
+  数组格式为：[股票代码，拼音首字母，股票名称，类型]
+
+
+5、行业概念地区涨幅榜：
+   行业涨幅榜：http://kline.api.shqingsi.cn/v1/plateranking.php?typeCode=hangye
+
+   地区涨幅榜：http://kline.api.shqingsi.cn/v1/plateranking.php?typeCode=diyu
+
+   概念涨幅榜：http://kline.api.shqingsi.cn/v1/plateranking.php?typeCode=gainian
+
+   返回字段：
+
+code:股票代码
+
+name：股票名称
+
+change：股票涨跌额
+
+changeRate：股票涨跌幅
+
+id:行业ID编号
+
+title：行业名称
+
+rate：行业涨幅
+
+
+
+6、行业个股涨幅榜：http://kline.api.shqingsi.cn/v1/updownlist.php
+
+返回字段：
+
+code:股票代码
+
+name：股票名称
+
+change：股票涨跌额
+
+changeRate：股票涨跌幅
+
+id:行业ID编号
+
+title：行业名称
+
+rate：行业涨幅
 
  
  基于此行情得移动端DEMO（狙击手APP）下载地址：https://app.download.ebamai.com/sniper/index.php
