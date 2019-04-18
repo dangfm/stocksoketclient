@@ -1,5 +1,6 @@
 package com.dangfm.stock.socketclient.utils;
 
+import com.dangfm.stock.socketclient.server.StockResposeDatas;
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
@@ -10,6 +11,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import com.dangfm.stock.socketclient.Config;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.mail.Message;
 import javax.mail.Session;
@@ -46,7 +49,7 @@ import static java.lang.Thread.sleep;
  * Created by dangfm on 16/4/2.
  */
 public class FN {
-
+    public static final Logger logger = LoggerFactory.getLogger(FN.class);
     public static ImageIcon getImageIcon(String path, int width, int height) {
         if (width == 0 || height == 0) {
             return new ImageIcon(path);
@@ -720,41 +723,83 @@ public class FN {
     public static void getServerIp(){
 
         if (Config.serverIP.isEmpty() || Config.serverIP==null) {
-//            System.out.println("初始化请求行情服务器地址："+Config.socketServer+Config.socketServer_Ip);
-            String serverInfo = HttpWebCollecter.getWebContent(Config.socketServer+Config.socketServer_Ip);
-//            System.out.println(serverInfo);
-            if (serverInfo != null) {
-                if (!serverInfo.isEmpty()) {
-                    if (serverInfo.indexOf(":") >= 0) {
-                        String[] s = serverInfo.split(":");
-                        String server = s[0];
-                        String port = s[1];
+            System.out.println("初始化请求行情服务器地址："+Config.socketServer+Config.socketServer_Ip);
+            String serverInfo = null;
+            try {
+                serverInfo = HttpWebCollecter.GetWebContent(Config.socketServer+Config.socketServer_Ip,"utf-8",5000);
 
-                        Config.serverPort = port;
-                        Config.serverIP = server;
-                        return;
+                //System.out.println(serverInfo);
+                if (serverInfo != null) {
+                    if (!serverInfo.isEmpty()) {
+                        if (serverInfo.indexOf(":") >= 0) {
+                            serverInfo = serverInfo.trim();
+                            serverInfo = serverInfo.replace("\n","");
+                            serverInfo = serverInfo.replace("\r","");
+                            String[] s = serverInfo.split(":");
+                            String server = s[0];
+                            String port = s[1];
+                            logger.info("IP:"+server + " PORT:"+port);
+                            Config.serverPort = port;
+                            Config.serverIP = server;
+                            return;
 
+                        }
                     }
                 }
+
+            } catch (IOException e) {
+                logger.error(e.toString());
             }
+
+
+            try {
+                sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            // 继续请求
+            getServerIp();
         }
 
-        if (Config.serverIP.isEmpty()){
-            while (true){
-                // 继续请求
-                getServerIp();
+    }
 
-                if (!Config.serverIP.isEmpty()){
-
-                    break;
-                }
-                try {
-                    sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+    /**
+     * 获取K线网关
+     */
+    public static String getKlineServerIp(){
+        String urlStr = Config.socketServer+Config.klineServer_Ip;
+        StringBuffer sb = new StringBuffer();
+        String klineserverip = null;
+        try{
+//            logger.info("请求K线:"+urlStr+"");
+            sb.append(HttpWebCollecter.getWebContent(urlStr));
+            if (sb.toString().indexOf(".")>0) {
+                String ip = sb.toString();
+                ip = ip.trim();
+                if (ip.startsWith("http")) {
+                    klineserverip = ip;
                 }
             }
+
+        }catch(Exception e)  {
+            //  Report  any  errors  that  arise
+            //sb.append(e.toString());
+            logger.error("请求K线网关出错"+urlStr);
+            try {
+                sleep(3000);
+
+            } catch (InterruptedException e1) {
+                e1.printStackTrace();
+            }
+
         }
+
+        if (klineserverip==null){
+            return getKlineServerIp();
+        }
+
+        return klineserverip;
     }
 
     /**

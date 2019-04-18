@@ -63,6 +63,20 @@ public class Main {
              * 同步K线数据 参数2是全量更新K线，周六日默认都是全量更新的
              */
             FN.createExecutor("20:00:00", 0, new GetStockDaysLine(args0==2), (args0 == 3 || args0==2) ? true : false,executor);
+
+            if(args0==4){
+                /**
+                 * 只同步分钟K线数据
+                 */
+                FN.createExecutor("7:00:00", 0, new GetStockDaysLine(true,true), true,executor);
+            }
+            if(args0==5){
+                /**
+                 * 只同步分钟K线数据,增量同步
+                 */
+                FN.createExecutor("7:00:00", 0, new GetStockDaysLine(false,true), true,executor);
+            }
+
             FN.createExecutor("7:00:00", 0, new GetStockDaysLine(false), false,executor);
 
             // 生成历史k线

@@ -52,7 +52,7 @@ public class StockResposeDatas {
      * 本地redis
      */
     private static RedisCls redisCls = new RedisCls();
-
+    private static Pipeline pipeline = redisCls.getRedis().pipelined();
 
 
     /**
@@ -188,7 +188,7 @@ public class StockResposeDatas {
                     JSONObject obj = new JSONObject(data);
                     int error = obj.getInt("error");
                     String msg = obj.getString("msg");
-                    logger.info(msg);
+                    logger.info(obj.toString());
                     if (error > 0) {
                         Config.isreConnected = false;
                     }else{
@@ -247,7 +247,7 @@ public class StockResposeDatas {
                         sh000001_obj = null;
                     }
 
-                    Pipeline pipeline = redisCls.getRedis().pipelined();
+
 
                     // 写入redis
                     JSONArray keys = obj.names();
@@ -274,24 +274,23 @@ public class StockResposeDatas {
                     }
                     pipeline.sync();
                     pipeline.clear();
-                    pipeline.close();
+                    //pipeline.close();
 
                     // 共享给其他服务用
                     Config.realtimeStockDatas = obj;
 
                     Date d1 = FN.strToDate(lastDate+" "+lastTime,"yyyy-MM-dd HH:mm:ss");
                     Date d2 = new Date();
-                    int s = (int)(d2.getTime() - d1.getTime())/1000;
+                    double s = (d2.getTime() - d1.getTime());
+
 //                    logger.info(obj.toString());
 //                    logger.info("接收到实时行情"+keys.length()+"笔 "+stockCode+"最新时间：" + lastTime+" 当前时间："+FN.getDateWithFormat("HH:mm:ss",new Date())+" 总共"+stockRealTimes.length()+"个股票");
-                    System.out.println("接收到实时行情"+keys.length()+"笔 "+stockCode+"最新时间：" + lastTime+" 当前时间："+FN.getDateWithFormat("HH:mm:ss",new Date())+" 延时"+s+"秒 总共"+stockRealTimes.length()+"个股票");
+                    System.out.println("接收到实时行情"+keys.length()+"笔 "+stockCode+"最新时间：" + lastTime+" 当前时间："+FN.getDateWithFormat("HH:mm:ss",new Date())+" 延时"+String.format("%.2f",s)+"毫秒 总共"+stockRealTimes.length()+"个股票");
                     keys = null;
                 }
                 obj = null;
             } catch (JSONException e) {
                 logger.error(e.toString());
-            } catch (IOException e) {
-                e.printStackTrace();
             }
 
     }

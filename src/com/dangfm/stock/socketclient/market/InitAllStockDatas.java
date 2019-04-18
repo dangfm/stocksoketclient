@@ -21,7 +21,7 @@ public class InitAllStockDatas extends Thread{
     private static RedisCls localRedis = new RedisCls();
     private static RedisCls exRedis = new RedisCls();
     private static RedisCls fiRedis = new RedisCls();
-
+    private String klineserverip = null;
     public InitAllStockDatas(){
 
     }
@@ -39,6 +39,11 @@ public class InitAllStockDatas extends Thread{
                 e.printStackTrace();
             }
             i ++;
+        }
+
+        // 获取k线网关
+        while (klineserverip==null){
+            klineserverip = FN.getKlineServerIp();
         }
 
         // 初始化板块
@@ -64,7 +69,7 @@ public class InitAllStockDatas extends Thread{
         String params = "";
         String token = FN.MD5(params+t+Config.appKey+Config.appSecret);
         params = params + "t="+t+"&app_key="+Config.appKey+"&token="+token;
-        String url = Config.socketServer+"/stocktypes.php?"+params;
+        String url = klineserverip+"/stocktypes.php?"+params;
 //        logger.info("开始初始化所有股票板块分类数据"+url);
         String html = HttpWebCollecter.getWebContent(url);
         if (html!=null){
@@ -118,7 +123,7 @@ public class InitAllStockDatas extends Thread{
         String params = "";
         String token = FN.MD5(params+t+Config.appKey+Config.appSecret);
         params = params + "t="+t+"&app_key="+Config.appKey+"&token="+token;
-        String url = Config.socketServer+"/stocks.php?"+params;
+        String url = klineserverip+"/stocks.php?"+params;
 //        logger.info("开始初始化所有股票数据"+url);
         String html = HttpWebCollecter.getWebContent(url);
         if (html!=null){
@@ -205,7 +210,7 @@ public class InitAllStockDatas extends Thread{
         String params = "";
         String token = FN.MD5(params+t+Config.appKey+Config.appSecret);
         params = params + "t="+t+"&app_key="+Config.appKey+"&token="+token;
-        String url = Config.socketServer+"/search.php?"+params;
+        String url = klineserverip+"/search.php?"+params;
 //        logger.info("开始初始化所有股票搜索库数据"+url);
         String html = HttpWebCollecter.getWebContent(url);
         if (html!=null){
@@ -266,7 +271,7 @@ public class InitAllStockDatas extends Thread{
         String params = "";
         String token = FN.MD5(params+t+Config.appKey+Config.appSecret);
         params = params + "t="+t+"&app_key="+Config.appKey+"&token="+token;
-        String url = Config.socketServer+"/allstockquotes.php?"+params;
+        String url = klineserverip+"/allstockquotes.php?"+params;
 //        logger.info("开始初始化所有股票搜索库数据"+url);
         String html = HttpWebCollecter.getWebContent(url);
         if (html!=null){
@@ -329,7 +334,7 @@ public class InitAllStockDatas extends Thread{
         String params = "";
         String token = FN.MD5(params+t+Config.appKey+Config.appSecret);
         params = params + "t="+t+"&app_key="+Config.appKey+"&token="+token;
-        String url = Config.socketServer+"/exrights.php?"+params;
+        String url = klineserverip+"/exrights.php?"+params;
 //        logger.info("开始初始化所有股票搜索库数据"+url);
         String html = HttpWebCollecter.getWebContent(url);
         if (html!=null){
@@ -380,7 +385,7 @@ public class InitAllStockDatas extends Thread{
         String params = "";
         String token = FN.MD5(params+t+Config.appKey+Config.appSecret);
         params = params + "t="+t+"&app_key="+Config.appKey+"&token="+token;
-        String url = Config.socketServer+"/finance.php?"+params;
+        String url = klineserverip+"/finance.php?"+params;
 //        logger.info("开始初始化所有股票搜索库数据"+url);
         String html = HttpWebCollecter.getWebContent(url);
         if (html!=null){

@@ -557,8 +557,12 @@ public class MakeMarketUpDownList extends Thread{
                     }
                 }
 
+                sleep(20);
+
             } catch (JSONException e) {
                 logger.error(e.toString());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
 

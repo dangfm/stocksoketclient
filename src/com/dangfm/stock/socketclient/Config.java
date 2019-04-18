@@ -33,6 +33,7 @@ public class Config {
     public static String socketServer = FN.getProperty("socketServer");
     public static String socketServer_kline = "/kline.php";
     public static String socketServer_Ip = "/socketserverip.php";
+    public static String klineServer_Ip = "/klineserverip.php";
 
     // k线缓存地址
     public static final String klineSavePath = FN.getProperty("klineSavePath");

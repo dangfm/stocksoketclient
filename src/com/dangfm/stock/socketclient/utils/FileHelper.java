@@ -21,12 +21,12 @@ public class FileHelper {
             if(!file.exists()){
                 file.createNewFile();
                 bool = true;
-//                System.out.println("success create file,the file is "+fileName);
+                System.out.println("success create file,the file is "+fileName);
                 //创建文件成功后，写入内容到文件里
                 writeFileContent(fileName, filecontent,true);
             }else{
                 bool = true;
-//                System.out.println("success update file,the file is "+fileName);
+                System.out.println("success update file,the file is "+fileName);
                 //创建文件成功后，写入内容到文件里
                 writeFileContent(fileName, filecontent, false);
 
