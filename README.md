@@ -309,12 +309,72 @@ hgetall ExRight_Tables
 
 hget ExRight_Tables 600000
 
+返回数据：
+
+[{"code":"600000","datetime":"2000-07-06","give":0.0,"pei":0.0,"peiPrice":0.0,"profile":0.15000000596046448},{"code":"600000","datetime":"2002-08-22","give":0.5,"pei":0.0,"peiPrice":0.0,"profile":0.20000000298023224}]
+
+字段含义：
+
+code:股票代码
+
+datetime：日期
+
+give：每股送
+
+pei：每股配
+
+peiPrice:配股价
+
+profile：每股红利
+
 
 #财务数据
 
 hgetall Financial_Tables
 
 hget Financial_Tables 600000
+
+返回数据：
+
+{"code":"600000","datetime":"20180830","ZGB":"2935208.00","GJG":"180199.00","LTAG":"2810376.50","ZZC":"6091758592.0","LDZC":"0.0","GDZC":"31543000.0","JZC":"440855008.0","ZYSY":"82256000.0","ZYLY":"0.0","YYLY":"34164000.0","SHLY":"28900000.0","JLY":"28569000.0","DY":" 16","HY":" 1","ZBNB":"6","SSDATE":"19991110"}
+
+字段说明：
+
+code：股票代码
+
+datetime：日期
+
+ZGB:总股本
+
+GJG:国家股
+
+LTAG:流通A股
+
+ZZC:总资产
+
+LDZC：流动资产
+
+GDZC：固定资产
+
+JZC：净资产
+
+ZYSY：营业收入
+
+ZYLY：主营利润
+
+YYLY：营业利润
+
+SHLY：税后利润
+
+JLY：净利润
+
+DY：地域
+
+HY：行业
+
+ZBNB：资料月份 9 代表三季报 12代表年报
+
+SSDATE：上市日期
 
  
 
